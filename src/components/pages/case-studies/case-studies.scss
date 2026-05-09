@@ -1,0 +1,128 @@
+.ca-case-studies {
+  @apply py-[10rem];
+
+
+  color: #191919;
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      @apply text-[2.4vw] font-[700] mb-8;
+      color: inherit; 
+    }
+
+    h2 {
+      @apply text-[1.05vw] font-[400] max-w-[48.75rem] text-center;
+      color: var(--text-color-g, #191919);
+    }
+
+    .tab-btn {
+      @apply flex flex-wrap justify-center gap-4 my-12;
+
+      button {
+        @apply rounded-full font-semibold transition-all px-6 py-2 cursor-pointer text-[1rem];
+        background-color: #25272D; 
+
+        color: #fff;
+
+        &.active {
+          @apply text-white;
+          background: var(--color-gradient-secondary);
+        }
+
+        &[class*="bg-white"] {
+          color: #191919;
+        }
+      }
+    }
+
+    .all-case-studies-card {
+      @apply flex flex-wrap gap-x-8 my-6 w-full;
+
+      .box {
+        min-width: 12rem;  
+        width: 22%;
+
+        &.box00 {
+          position: relative;
+
+          .box__inner {
+            overflow: hidden;
+            height: 21.5625rem;
+            width: 100%;
+          }
+
+          img {
+            mask-image: linear-gradient(to top, #00000000 0%, #1b1c21 100%);
+            -webkit-mask-image: linear-gradient(to top, #00000000 0%, #1b1c21 100%);
+            filter: grayscale(1);
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: all 0.5s ease;
+            border-radius: 8px;
+          }
+
+          h5 {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-45%);
+            width: 100%;
+            text-align: left;
+            font-size: 1.05vw;
+
+            color: inherit; 
+          }
+
+          &:hover {
+            img {
+              filter: grayscale(0);
+              transform: scale(1.1);
+              border-radius: 8px;
+            }
+
+            .visit_btn {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .visit_btn {
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        z-index: 2;
+        display: none;
+      }
+
+      .btn-secondary {
+        @apply w-[max-content];
+
+        .wrapper {
+          @apply text-sm px-6 py-2;
+          color: inherit; 
+        }
+      }
+    }
+  }
+
+
+  &[class*="bg-[#191919]"], &[class*="bg-[#25272D]"] {
+    color: #fff;
+
+    .tab-btn button {
+      color: #fff;
+    }
+
+    .all-case-studies-card .box00 h5,
+    .btn-secondary .wrapper {
+      color: #fff;
+    }
+  }
+}

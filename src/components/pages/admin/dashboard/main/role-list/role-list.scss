@@ -1,0 +1,33 @@
+.member-status {
+  @apply rounded-full min-w-[6.25rem] w-[10rem] h-[2.125rem] flex items-center justify-center text-[0.875rem] font-normal border border-transparent whitespace-nowrap;
+
+  svg {
+    @apply hidden;
+  }
+
+  &.admin {
+    background-color: rgba(255, 204, 0, 0.1); 
+    border-color: #FFCC00;
+    color: #191919;
+  }
+
+  &.user {
+    background-color: rgba(52, 199, 89, 0.1); 
+    border-color: #34C759;
+    color: #191919;
+  }
+
+  &.account_department,
+  &.publisher_department,
+  &.content_creator {
+    background-color: rgba(0, 136, 255, 0.1); 
+    border-color: #0088FF;
+    color: #191919;
+  }
+
+  &.marketer {
+    background-color: rgba(52, 199, 89, 0.1); 
+    border-color: #34C759;
+    color: #191919;
+  }
+}

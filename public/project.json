@@ -1,0 +1,406 @@
+[
+  {
+    "id": 1,
+    "title": "Teach it – A Education Related Website",
+    "slug": "teach-it",
+    "shortName": "Teach it",
+    "type": "Development & Case Study",
+    "summary": "A portfolio site showcasing AI-integrated features.",
+    "description": "Teach It! is a peer-to-peer e-learning platform designed to democratize education through open course publishing, multilingual content, and intelligent community-driven features. Our team partnered with Teach It and prominent stakeholders like the Bangladesh Ministry of ICT, Banglalink Telecom, Teach for Bangladesh, and the Queen’s Commonwealth Trust to build and evolve this ambitious platform. We led the transition to a modern, scalable React/Laravel-based system, ensuring the platform could support future growth, cutting-edge features, and seamless user experience for both learners and educators.",
+    "problemStatement": "Teach It’s initial infrastructure struggled to handle growing traffic, content scalability, and dynamic peer-to-peer interactions. The outdated tech stack hindered performance, and the platform lacked modern tools for personalized learning, interactive engagement, and global accessibility. With increasing demand from users and partners, a robust re-engineering was necessary to meet expectations and ensure long-term sustainability.",
+    "solutionImplemented": {
+      "steps": ["Ensure platform scalability and accessibility across regions.", "Drive monetization and motivation for educators.", "Foster a dynamic, gamified community experience for learners."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660357/project-1_wvhpa1.png"
+    },
+    "visualDesign": {
+      "steps": ["Color-coded progress and ranking indicators.", "User-friendly dashboards for teachers and learners.", "Mobile-first approach for seamless use across devices.","Multilingual toggle and accessibility-friendly fonts/icons.","VR preview screens integrated within learning modules."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660383/project-2_hgy0ml.png"
+    },
+    "achievement": {
+      "steps": ["Secured national-level funding from the Bangladesh Ministry of ICT and Queen’s Trust Fund.", "Successfully launched the revamped platform in January 2020.", "Onboarded thousands of educators and learners within months of relaunch.","Recognized as a pioneering localized learning solution in South Asia.","Scalable infrastructure ready for further AI and gamification enhancements."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660957/undraw_winners_fre4_1_hfyl9x.png"
+    },
+    "featuredImage": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754837437/ui_1_k3iqqz.webp",
+    "featuredVideo": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754661146/Monitor_Screen_Mockup_A.3_kbp4hq.png",
+    "gallery": ["https://example.com/gallery1.jpg", "https://example.com/gallery2.jpg"],
+    "startDate": "2024-01-10",
+    "endDate": "2024-03-20",
+    "status": "completed",
+    "repoUrl": "https://github.com/example/ai-portfolio",
+    "liveUrl": "https://aiportfolio.example.com",
+    "tags": ["AI", "Portfolio", "Next.js"],
+    "categories": ["Web Development"],
+    "authors": [
+      { "name": "Subir Das", "role": "Lead Developer", "image": "https://example.com/subir.jpg" }
+    ],
+    "meta": { "views": 1200, "likes": 150 },
+    "metadata": { "title": "AI Portfolio", "description": "A modern AI-driven portfolio site." },
+    "likedBy": ["60dfefb5f12a4a001c8d4a1b"],
+    "comments": [
+      { "author": "60dfefb5f12a4a001c8d4a1b", "body": "Amazing project!", "publishedAt": "2024-03-21T10:00:00Z", "replies": [] }
+    ],
+    "testimonials": [
+      {
+        "id":1,
+         "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754659951/Rectangle_48_jgcij9.png", 
+         "comment": "Working with the team behind Teach It’s new platform was transformative. Their ability to translate our mission into a powerful, user-friendly, and future-ready digital experience helped us reach learners we never thought possible. The community response and growth have been beyond our expectations.", 
+         "userName": "Frei Josef", 
+         "userOccupation": "CEO & Founder", 
+         "company": "Teach it" 
+        }
+    ],
+    "createdAt": "2024-01-05T09:00:00Z",
+    "updatedAt": "2024-03-21T12:00:00Z",
+    "commentCount": 1
+  },
+  {
+    "id": 2,
+    "title": "Bangla Institute – Global Language Learning Platform",
+    "slug": "bangla-institute",
+    "shortName": "Bangla Institute",
+    "type": "Development & Case Study",
+    "summary": "A comprehensive platform for learning the Bangla language.",
+    "description": "Bangla Institute is a global EdTech platform designed to teach the Bangla language to learners of all ages, regardless of location. From the USA to the UK, Canada, Australia, and beyond, students use the platform to connect with experienced teachers in a personalized learning environment. Our development team helped build and scale this digital platform to support seamless one-on-one teaching and engaging, curriculum-aligned content delivery.",
+    "problemStatement": "Language learning, especially for diaspora communities, often lacks accessibility, personalization, and cultural connection. Bangla Institute needed a scalable digital platform to bridge this gap—ensuring quality instruction, real-time engagement, and progress tracking, all while making learning Bangla enjoyable and effective for a global audience.",
+    "solutionImplemented": {
+      "steps": ["Developing a secure, scalable platform for 1-on-1 virtual teacher-student interaction.", "Integrating tools that align with specific course curricula, tailored for different age groups and levels.", "Embedding creative modules such as stories, music, and games to increase student engagement.","Implementing a robust reporting and feedback system to provide regular updates to parents on student progress."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754669478/Nothing_Phone_1_cneewj.png"
+    },
+    "visualDesign": {
+      "steps": ["The platform was designed with a playful yet professional aesthetic to appeal to both young learners and adults.", "We used warm colors, clean typography, and intuitive navigation to create a comforting learning space.", "Interactive class interfaces and progress dashboards were included to keep students and parents involved and informed."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754669580/Rectangle_zq82ro.png"
+    },
+    "achievement": {
+      "steps": ["Successfully onboarded students from over 10 countries.", "High student engagement due to story-based and gamified learning components.","Positive feedback from parents citing clear communication and visible progress.","Improved retention rates owing to personalized teaching and interactive lessons.","Enabled Bangla Institute to scale operations without compromising quality."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660957/undraw_winners_fre4_1_hfyl9x.png"
+    },
+    "featuredImage": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754837349/iPhone_15_Pro_1_gddbie.webp",
+    "featuredVideo": "https://example.com/video2.mp4",
+    "gallery": ["https://example.com/gallery3.jpg", "https://example.com/gallery4.jpg"],
+    "startDate": "2024-02-15",
+    "endDate": "2024-05-01",
+    "status": "completed",
+    "repoUrl": "https://github.com/example/fashionhub",
+    "liveUrl": "https://fashionhub.example.com",
+    "tags": ["E-commerce", "React", "Node.js"],
+    "categories": ["Web Development"],
+    "authors": [
+      { "name": "Jane Smith", "role": "Frontend Developer", "image": "https://example.com/jane.jpg" }
+    ],
+    "meta": { "views": 2500, "likes": 200 },
+    "metadata": { "title": "FashionHub", "description": "Modern clothing e-commerce site." },
+    "likedBy": ["60dfefb5f12a4a001c8d4a1c"],
+    "comments": [
+      { "author": "60dfefb5f12a4a001c8d4a1c", "body": "Shopping is so smooth here!", "publishedAt": "2024-05-02T15:00:00Z", "replies": [] }
+    ],
+    "testimonials": [
+      {
+          "id":1,
+         "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754659951/Rectangle_48_jgcij9.png", "comment": "Thanks to the development team, our vision of bringing Bangla to every home across the world became a reality. The platform not only supports effective teaching but also creates a joyful experience for every learner. Parents love it, and the kids do too!", "userName": "Frei Josef", "userOccupation": "Founder", "company": "Bangla Institute" }
+    ],
+    "createdAt": "2024-02-10T09:00:00Z",
+    "updatedAt": "2024-05-02T15:00:00Z",
+    "commentCount": 1
+  },
+  {
+    "id": 3,
+    "title": "Pathwork – Casper Academy ",
+    "slug": "pathwork",
+    "shortName": "Pathwork",
+    "type": "Development & Case Study",
+    "summary": "Control your home devices from anywhere.",
+    "description": "Pathwork is a modern microlearning platform designed to help organizations unlock the potential of their employees through bite-sized training. Built for HR professionals and learning managers, the system is currently being used by companies and NGOs throughout Bangladesh. The platform focuses on making learning engaging, measurable, and accessible—directly supporting workplace skill development and growth.",
+    "problemStatement": "Traditional training programs are often lengthy, difficult to retain, and hard to scale. Many employers in Bangladesh lacked a flexible, lightweight solution for continuous employee development. There was a need for a mobile-first, gamified learning platform that allowed employees to learn at their own pace, with trackable results and clear incentives.",
+    "solutionImplemented": {
+      "steps": ["Creating bite-sized, mobile-friendly content delivery tools.", "Implementing a dynamic quiz system for learning validation.", "Building profile systems for progress tracking and user management.","Introducing gamified reward features to boost motivation and completion rates.","Integrating notification systems to remind and re-engage learners regularly."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754670538/Nothing_Phone_1_1_k36eyx.png"
+    },
+    "visualDesign": {
+      "steps": ["Pathwork's interface is designed with simplicity and productivity in mind. Clean cards, progress bars, and minimal UI clutter make learning intuitive.", "Bright but professional color schemes were chosen to make the platform feel energetic and focused.", "The quiz and reward modules use visual cues and animations to reinforce progress and success."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754670623/Rectangle_1_mo8vkq.png"
+    },
+    "achievement": {
+      "steps": ["Over 1,000 employees from Banks and companies onboarded since launch.", "Increased course completion rates due to microlearning format and gamification.","HR managers report improved engagement and skill tracking using the platform.","Average session time increased by 40% through content chunking and notifications.","Strong positive feedback from both learners and training supervisors."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660957/undraw_winners_fre4_1_hfyl9x.png"
+    },
+    "featuredImage": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754837527/Hand_and_iPhone_16_Pro_1_g5vkis.webp",
+    "featuredVideo": "https://example.com/video3.mp4",
+    "gallery": ["https://example.com/gallery5.jpg", "https://example.com/gallery6.jpg"],
+    "startDate": "2024-04-01",
+    "endDate": "2024-07-15",
+    "status": "completed",
+    "repoUrl": "https://github.com/example/homeease",
+    "liveUrl": "https://homeease.example.com",
+    "tags": ["IoT", "React Native", "Smart Home"],
+    "categories": ["Mobile Development"],
+    "authors": [
+      { "name": "Michael Lee", "role": "Full Stack Developer", "image": "https://example.com/michael.jpg" }
+    ],
+    "meta": { "views": 3200, "likes": 350 },
+    "metadata": { "title": "HomeEase", "description": "Smart home control at your fingertips." },
+    "likedBy": ["60dfefb5f12a4a001c8d4a1d"],
+    "comments": [
+      { "author": "60dfefb5f12a4a001c8d4a1d", "body": "Super easy to control my devices!", "publishedAt": "2024-07-16T14:00:00Z", "replies": [] }
+    ],
+   "testimonials": [
+      {
+          "id":1,
+         "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754659951/Rectangle_48_jgcij9.png", "comment": "Pathwork has completely changed how we approach employee training. The platform is simple, effective, and engaging. Our team loves the quick lessons, and we love the results. Huge thanks to the developers for bringing our idea to life.", "userName": "Frei Josef", "userOccupation": "HR Director", "company": "Casper Foundation" }
+    ],
+    "createdAt": "2024-03-25T09:00:00Z",
+    "updatedAt": "2024-07-16T14:00:00Z",
+    "commentCount": 1
+  },
+  {
+    "id": 4,
+    "title": "CADF Website",
+    "slug": "CADF",
+    "shortName": "CADF",
+    "type": "Development & Case Study",
+    "summary": "A platform for interactive online courses.",
+    "description": "The CADF platform was developed to support inclusive development, therapy, education, and advocacy efforts across Bangladesh. Built to serve families, professionals, and volunteers, the platform brings together information, resources, and engagement tools under a unified digital hub. The site is now live at cadf.charity and continues to drive impact through awareness, donations, and community programs.",
+    "problemStatement": "CADF needed a comprehensive, user-friendly website to showcase its impactful work and create meaningful connections with supporters. Previously, the organization lacked a centralized digital system to manage donations, share resources, update programs, and recruit volunteers. There was also a critical need for bilingual support to reach both Bengali and English-speaking audiences effectively.",
+    "solutionImplemented": {
+      "steps": ["Accept and manage donations (one-time and recurring), with campaign-based tracking.", "Display and regularly update detailed information about their therapy, education, and youth development programs.", "Share timely blog posts, articles, and event announcements to inform and educate.","Recruit and manage volunteers and members with engagement tracking and automated communications.","Deliver an accessible, multilingual experience across devices, supporting both Bengali and English."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754671248/Galaxy_Tab_S8_Ultra_uvl8qw.png"
+    },
+    "visualDesign": {
+      "steps": ["We designed the CADF platform to reflect compassion, professionalism, and trust.", "The visual identity uses soft, inclusive colors and clean typography, optimized for both desktop and mobile.", "Intuitive navigation and accessibility standards were prioritized, ensuring that all users—including those with disabilities—can access the platform with ease.","Bilingual toggle features are built into the UI for seamless language switching."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754671349/MacBook_Air_2022_1_oftzbr.png"
+    },
+    "achievement": {
+      "steps": ["Successfully launched the website at cadf.charity within the project timeline.", "Enabled secure, real-time donation processing with campaign insights.","Streamlined volunteer and membership onboarding with personalized follow-up systems.","Improved outreach through blog and event publishing capabilities.","Boosted user engagement with a fully responsive, mobile-first design and bilingual support."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660957/undraw_winners_fre4_1_hfyl9x.png"
+    },
+    "featuredImage": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754837622/MacBook_Air_2022_4_jdxl7s.webp",
+    "featuredVideo": "https://example.com/video4.mp4",
+    "gallery": ["https://example.com/gallery7.jpg", "https://example.com/gallery8.jpg"],
+    "startDate": "2024-03-05",
+    "endDate": "2024-06-25",
+    "status": "completed",
+    "repoUrl": "https://github.com/example/edupro",
+    "liveUrl": "https://edupro.example.com",
+    "tags": ["E-learning", "Node.js", "React"],
+    "categories": ["Web Development"],
+    "authors": [
+      { "name": "Linda Brown", "role": "Backend Developer", "image": "https://example.com/linda.jpg" }
+    ],
+    "meta": { "views": 2100, "likes": 180 },
+    "metadata": { "title": "EduPro", "description": "Interactive online learning platform." },
+    "likedBy": ["60dfefb5f12a4a001c8d4a1e"],
+    "comments": [
+      { "author": "60dfefb5f12a4a001c8d4a1e", "body": "Loved the quizzes and rewards system!", "publishedAt": "2024-06-26T13:00:00Z", "replies": [] }
+    ],
+      "testimonials": [
+      {
+          "id":1,
+         "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754659951/Rectangle_48_jgcij9.png", "comment": "Our new website has truly become the digital heart of CADF’s mission. The developers understood our needs and transformed our vision into a living platform that educates, empowers, and connects. It’s already making a difference.", "userName": "Frei Josef", "userOccupation": "Executive Director", "company": "CADF" }
+    ],
+    "createdAt": "2024-02-25T09:00:00Z",
+    "updatedAt": "2024-06-26T13:00:00Z",
+    "commentCount": 1
+  },
+
+  {
+    "id": 5,
+    "title": "Forum – Empowering Bangladesh's Apparel Leaders",
+    "slug": "BGMEA",
+    "shortName": "BGMEA",
+    "type": "Development & Case Study",
+    "summary": "A portfolio site showcasing AI-integrated features.",
+    "description": "The BGMEA Forum is a purpose-built digital platform created to foster unity, thought leadership, and collaboration among BGMEA (Bangladesh Garment Manufacturers and Exporters Association) members. It serves as a central meeting point for sharing insights, discussing challenges, and driving collective innovation across the apparel sector. The platform is now live and actively supporting initiatives that shape the future of the industry.",
+    "problemStatement": "BGMEA lacked a dynamic, centralized platform where members could engage with leadership content, network, and access updates on key initiatives. Communication channels were fragmented, and there was no single source of truth for upcoming events, policy discussions, or innovation programs—hindering active member participation and sector-wide dialogue.",
+    "solutionImplemented": {
+      "steps": ["Create a Member Directory to enable easy discovery and professional networking.", "Integrate a comprehensive Event Management System to promote forums, conferences, and leadership gatherings.", "Develop a Content Hub to publish speeches, thought pieces, and leadership messages.","Showcase Forum Initiatives that highlight sustainability, innovation, and progress within the industry.","Ensure full Responsive Design for optimal performance across all device types and screen sizes."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754671863/Mac_Studio_lbld5s.png"
+    },
+    "visualDesign": {
+      "steps": ["The platform’s UI embodies modernity, professionalism, and clarity—reflecting the forward-thinking nature of BGMEA.", "The design prioritizes usability with a clean layout, intuitive navigation, and mobile-first responsiveness.", "Typography and color schemes were chosen to convey trust, authority, and innovation, appealing to both established members and young industry leaders."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754671916/MacBook_01_oghr7q.png"
+    },
+    "achievement": {
+      "steps": ["Successfully launched the platform with active engagement from BGMEA leadership and members.", "Streamlined event promotion and management with real-time updates and RSVP tools.", "Strengthened member-to-member visibility and networking via the directory.","Increased visibility of sustainability and innovation programs through the initiatives showcase.","Improved communication and content distribution through a centralized digital hub."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660957/undraw_winners_fre4_1_hfyl9x.png"
+    },
+    "featuredImage": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754837795/MacBook_13_2_kub53n.webp",
+    "featuredVideo": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754661146/Monitor_Screen_Mockup_A.3_kbp4hq.png",
+    "gallery": ["https://example.com/gallery1.jpg", "https://example.com/gallery2.jpg"],
+    "startDate": "2024-01-10",
+    "endDate": "2024-03-20",
+    "status": "completed",
+    "repoUrl": "https://github.com/example/ai-portfolio",
+    "liveUrl": "https://aiportfolio.example.com",
+    "tags": ["AI", "Portfolio", "Next.js"],
+    "categories": ["Web Development"],
+    "authors": [
+      { "name": "Subir Das", "role": "Lead Developer", "image": "https://example.com/subir.jpg" }
+    ],
+    "meta": { "views": 1200, "likes": 150 },
+    "metadata": { "title": "AI Portfolio", "description": "A modern AI-driven portfolio site." },
+    "likedBy": ["60dfefb5f12a4a001c8d4a1b"],
+    "comments": [
+      { "author": "60dfefb5f12a4a001c8d4a1b", "body": "Amazing project!", "publishedAt": "2024-03-21T10:00:00Z", "replies": [] }
+    ],
+    "testimonials": [
+      {
+        "id":1,
+         "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754659951/Rectangle_48_jgcij9.png", 
+         "comment": "The BGMEA Forum platform is more than just a website—it’s a powerful tool for collaboration and transformation. Thanks to the development team’s insight and execution, we now have a space where ideas can thrive and industry leaders can unite.”", 
+         "userName": "Frei Josef", 
+         "userOccupation": "Forum Coordinator", 
+         "company": "BGMEA" 
+        }
+    ],
+    "createdAt": "2024-01-05T09:00:00Z",
+    "updatedAt": "2024-03-21T12:00:00Z",
+    "commentCount": 1
+  },
+  {
+    "id": 6,
+    "title": "Make My Jersey Bangladesh – Custom Apparel Made Simple",
+    "slug": "make-my-jersey",
+    "shortName": "Make My Jersey",
+    "type": "Development & Case Study",
+    "summary": "A comprehensive platform for learning the Bangla language.",
+    "description": "Make My Jersey Bangladesh is a first-of-its-kind digital platform enabling individuals, sports teams, and fans across the country to create and order custom-designed jerseys online. The platform simplifies jersey customization, bulk ordering, and payment—all from the convenience of a mobile device or desktop. The project is currently live and actively serving a growing community of jersey lovers and sports teams.",
+    "problemStatement": "Custom sportswear ordering in Bangladesh has traditionally been a manual, offline process—slow, error-prone, and lacking personalization. Customers struggled to communicate their design preferences, manage team orders, or track order progress. The client needed a scalable, intuitive, and fully digital platform to streamline this end-to-end process.",
+    "solutionImplemented": {
+      "steps": ["Custom Jersey Builder: Allow users to choose styles, colors, and personalize jerseys with names, numbers, and logos", "Team Order System: Handle bulk orders efficiently with features for uploading team rosters and sizes.", "Product Catalog: Present pre-designed collections and trending jersey templates for quick selection.","Online Payment & Tracking: Integrate secure payment methods with real-time order status updates.","Mobile-Friendly Interface: Ensure a fast, responsive, and delightful user experience on all screen sizes."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754672341/iPad_Mini_pi0chn.png"
+    },
+    "visualDesign": {
+      "steps": ["The UI was crafted to be bold and energetic—reflecting the spirit of sports and personalization.", "The custom jersey builder features real-time previews and drag-and-drop elements for ease of use.", "The product catalog uses large visuals and intuitive filters, while the checkout and tracking systems are streamlined for speed and clarity."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754672424/MacBook_Air_2022_2_lbhn8u.png"
+    },
+    "achievement": {
+      "steps": ["Thousands of custom jersey orders processed across Bangladesh within weeks of launch.", "High user satisfaction scores attributed to the easy customization process and mobile optimization.","Streamlined bulk order management for school, corporate, and club teams.","Positive conversion rates due to reduced friction in design-to-checkout flow.","Boosted brand visibility and repeat business through engaging, visual-first UX."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660957/undraw_winners_fre4_1_hfyl9x.png"
+    },
+    "featuredImage": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754837886/MacBook_01_3_c4o0ff.webp",
+    "featuredVideo": "https://example.com/video2.mp4",
+    "gallery": ["https://example.com/gallery3.jpg", "https://example.com/gallery4.jpg"],
+    "startDate": "2024-02-15",
+    "endDate": "2024-05-01",
+    "status": "completed",
+    "repoUrl": "https://github.com/example/fashionhub",
+    "liveUrl": "https://fashionhub.example.com",
+    "tags": ["E-commerce", "React", "Node.js"],
+    "categories": ["Web Development"],
+    "authors": [
+      { "name": "Jane Smith", "role": "Frontend Developer", "image": "https://example.com/jane.jpg" }
+    ],
+    "meta": { "views": 2500, "likes": 200 },
+    "metadata": { "title": "FashionHub", "description": "Modern clothing e-commerce site." },
+    "likedBy": ["60dfefb5f12a4a001c8d4a1c"],
+    "comments": [
+      { "author": "60dfefb5f12a4a001c8d4a1c", "body": "Shopping is so smooth here!", "publishedAt": "2024-05-02T15:00:00Z", "replies": [] }
+    ],
+    "testimonials": [
+      {
+          "id":1,
+         "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754659951/Rectangle_48_jgcij9.png", "comment": "The BGMEA Forum platform is more than just a website—it’s a powerful tool for collaboration and transformation. Thanks to the development team’s insight and execution, we now have a space where ideas can thrive and industry leaders can unite.”", "userName": "Frei Josef", "userOccupation": "Forum Coordinator", "company": "BGMEA" }
+    ],
+    "createdAt": "2024-02-10T09:00:00Z",
+    "updatedAt": "2024-05-02T15:00:00Z",
+    "commentCount": 1
+  },
+  {
+    "id": 7,
+    "title": "Health Plus BD",
+    "slug": "health-plus-bd",
+    "shortName": "HealthPlus BD",
+    "type": "Development & Case Study",
+    "summary": "Control your home devices from anywhere.",
+    "description": "HealthPlus BD is a healthcare platform designed to connect patients with medical professionals across Bangladesh, India, and Thailand. The application facilitates appointment booking, remote consultations, and second medical opinions from renowned practitioners and institutions. Our team is currently engaged in optimizing the existing version while rolling out new features and delivering a completely revamped user interface and experience.",
+    "problemStatement": "The existing platform was functional but lacked scalability, user experience polish, and advanced communication features. Users faced limitations in secure interaction, document sharing, and tracking medical service requests. Additionally, the UI needed modernization to align with evolving expectations in digital healthcare services.",
+    "solutionImplemented": {
+      "steps": ["Implementing a secure, role-based login system with unique user-accessible URLs.", "Introducing email-based notifications and reminder systems for key events (e.g., approvals, completions, pending requests).", "Developing an integrated messaging system between patients and medical stakeholders for seamless communication.","Building an indexed, searchable system for managing service requests and documents.","Designing a fresh, modern interface that reflects trust, care, and accessibility."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754672755/PixelBook_Go_g31vxl.png"
+    },
+    "visualDesign": {
+      "steps": ["We overhauled the UI with a mobile-first approach, emphasizing clarity and ease of navigation.", "Soft, professional colors were used to reflect a trustworthy medical environment.", "Custom icons, intuitive form layouts, and a structured dashboard were introduced to ensure both patients and healthcare providers could operate the system with ease."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754672822/MacBook_13_1_bl6ugz.png"
+    },
+    "achievement": {
+      "steps": ["45% improvement in user session time post-UI redesign.", "60% faster request handling due to better document and request indexing.","Significant reduction in missed appointments through the email reminder system.","Seamless onboarding of international medical experts due to user-friendly profile and permission setup.","Positive stakeholder feedback on the messaging and document management modules."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660957/undraw_winners_fre4_1_hfyl9x.png"
+    },
+    "featuredImage": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754837999/MacBook_01_4_iejysj.webp",
+    "featuredVideo": "https://example.com/video3.mp4",
+    "gallery": ["https://example.com/gallery5.jpg", "https://example.com/gallery6.jpg"],
+    "startDate": "2024-04-01",
+    "endDate": "2024-07-15",
+    "status": "completed",
+    "repoUrl": "https://github.com/example/homeease",
+    "liveUrl": "https://homeease.example.com",
+    "tags": ["IoT", "React Native", "Smart Home"],
+    "categories": ["Mobile Development"],
+    "authors": [
+      { "name": "Michael Lee", "role": "Full Stack Developer", "image": "https://example.com/michael.jpg" }
+    ],
+    "meta": { "views": 3200, "likes": 350 },
+    "metadata": { "title": "HomeEase", "description": "Smart home control at your fingertips." },
+    "likedBy": ["60dfefb5f12a4a001c8d4a1d"],
+    "comments": [
+      { "author": "60dfefb5f12a4a001c8d4a1d", "body": "Super easy to control my devices!", "publishedAt": "2024-07-16T14:00:00Z", "replies": [] }
+    ],
+   "testimonials": [
+      {
+          "id":1,
+         "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754659951/Rectangle_48_jgcij9.png", "comment": "Partnering with this team has significantly improved our platform’s usability and reach. The thoughtful features and the clean, professional UI have made a huge difference in how patients and healthcare providers interact. We’re excited for the next phase!", "userName": "Frei Josef", "userOccupation": "Product Owner", "company": "HealthPlus BD" }
+    ],
+    "createdAt": "2024-03-25T09:00:00Z",
+    "updatedAt": "2024-07-16T14:00:00Z",
+    "commentCount": 1
+  },
+  {
+    "id": 8,
+    "title": "Personalized Web Feed System",
+    "slug": "web-feed-system",
+    "shortName": "Web Feed System",
+    "type": "Development & Case Study",
+    "summary": "A platform for interactive online courses.",
+    "description": "CodeAlign is developing a personalized content aggregation platform that enables users to build their own custom information feed. By leveraging web scraping, the system curates real-time updates from multiple sources based on individual user preferences. The project focuses on helping users cut through the noise of the internet by delivering relevant, high-quality information through a streamlined and responsive feed.",
+    "problemStatement": "In an age of information overload, users are constantly bombarded with irrelevant or low-quality content. Traditional newsfeeds and aggregators lack flexibility, control, and often promote sensational or algorithmically biased content. There was a clear need for a tool that empowers users to control what they see and when they see it—without compromising accuracy or user experience.",
+    "solutionImplemented": {
+      "steps": ["Enable content selection based on keywords, topics, or URLs defined by users.", "Allow users to add multiple data sources for a holistic yet focused feed.", "Display curated content in a personalized dashboard or feed interface.","Push real-time notifications when new relevant content is available.","Track changes in curated data to ensure up-to-date delivery.","Plan future AI integration for smart content suggestions and misinformation detection."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754673165/Nothing_Phone_1_2_lcs1kd.png"
+    },
+    "visualDesign": {
+      "steps": ["The design approach centers around minimalism and clarity.", "The feed interface uses card-style content blocks for easy scanning, with source filters and content tags integrated into the UI.", "The notification system is unobtrusive yet immediate, styled to match both desktop and mobile interfaces.","The color scheme is clean and modern, highlighting content without visual clutter."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754673250/iPhone_16_Pro_1_n9oj9c.png"
+    },
+    "achievement": {
+      "steps": ["Successfully implemented multi-source content scraping with real-time feed update capability.", "Developed a user-controlled feed configuration system with granular preferences.","Deployed a functional push notification service to alert users of new or updated content.","Early user tests show a 70% reduction in time spent filtering content manually.","Laid the groundwork for an AI-driven recommendation engine and misinformation detection module."],
+      "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660957/undraw_winners_fre4_1_hfyl9x.png"
+    },
+    "featuredImage": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754838101/iPhone_16_Pro_2_dsjuth.webp",
+    "featuredVideo": "https://example.com/video4.mp4",
+    "gallery": ["https://example.com/gallery7.jpg", "https://example.com/gallery8.jpg"],
+    "startDate": "2024-03-05",
+    "endDate": "2024-06-25",
+    "status": "completed",
+    "repoUrl": "https://github.com/example/edupro",
+    "liveUrl": "https://edupro.example.com",
+    "tags": ["E-learning", "Node.js", "React"],
+    "categories": ["Web Development"],
+    "authors": [
+      { "name": "Linda Brown", "role": "Backend Developer", "image": "https://example.com/linda.jpg" }
+    ],
+    "meta": { "views": 2100, "likes": 180 },
+    "metadata": { "title": "EduPro", "description": "Interactive online learning platform." },
+    "likedBy": ["60dfefb5f12a4a001c8d4a1e"],
+    "comments": [
+      { "author": "60dfefb5f12a4a001c8d4a1e", "body": "Loved the quizzes and rewards system!", "publishedAt": "2024-06-26T13:00:00Z", "replies": [] }
+    ],
+      "testimonials": [
+      {
+          "id":1,
+         "image": "https://res.cloudinary.com/dshvkl0rt/image/upload/v1754659951/Rectangle_48_jgcij9.png", "comment": "We wanted to create a feed system that worked for people, not algorithms. CodeAlign’s development team helped bring this idea to life with a clean, efficient, and forward-thinking solution. We’re excited about the roadmap ahead.", "userName": "Frei Josef", "userOccupation": "Product Lead", "company": "CodeAlign" }
+    ],
+    "createdAt": "2024-02-25T09:00:00Z",
+    "updatedAt": "2024-06-26T13:00:00Z",
+    "commentCount": 1
+  }
+ 
+]

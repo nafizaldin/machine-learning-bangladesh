@@ -1,0 +1,2403 @@
+{
+	"info": {
+		"_postman_id": "82251e2f-79c9-4a90-96e7-2acffe59bbe0",
+		"name": "CodeAlign",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18292239",
+		"_collection_link": "https://personal-team-0561.postman.co/workspace/Personal-Workspace~c7db1aad-6769-4923-85cc-0898ec6068e7/collection/18292239-82251e2f-79c9-4a90-96e7-2acffe59bbe0?action=share&source=collection_link&creator=18292239"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"yeagerist\",\n    \"email\":\"yeager@yopmail.com\",\n    \"password\":\"yeager@1234\",\n    \"number\": \"01969531372\",\n    // \"go_crazy121211\": true, // only enable it if you wanna user with admin role\n    \"role\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 200) {",
+									"    const responseData = pm.response.json();",
+									"    const token = responseData.token;",
+									"    pm.environment.set(\"JWT\", token);",
+									"    console.log(\"Token extracted and saved:\", token);",
+									"} else {",
+									"    console.error(\"Failed to extract token. Response code:\", pm.response.code);",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-client-sign",
+								"value": "J(Pg$M(G@6UbajM9kKFB!NWhHV8WwayKV@cWB3PtEDJ&62AnqGyvN&K@QY2g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"johnny@yopmail.com\",\n    \"password\":\"Johnny@1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"johnnysins@yopmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/forgot-password",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"johnnysins@yopmail.com\",\n    \"otp\":\"1011\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/verify-otp",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"johnnysins@yopmail.com\",\n    \"newPassword\":\"dhokadhoka\",\n    \"confirmPassword\": \"dhokadhoka\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/reset-password",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Google Sign in / sign up",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/google/callback",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"google",
+								"callback"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "ADMIN get all users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shortName\": \"Attack titan\",\n    \"name\": \"Eren Yeager\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADMIN Update User by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role\": \"content_creator\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users/68cb1cf5ae6182c4428d27b8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"68cb1cf5ae6182c4428d27b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/me/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADMIN Get single user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/6783c286bacdc0fc3d5159ff",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"6783c286bacdc0fc3d5159ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADMIN Get all customers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/customers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/686721e799dd6d64518cf8a8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"686721e799dd6d64518cf8a8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Get all blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Blog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs/68cb1e8bf2ff1d32f973d43f?q=related",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"68cb1e8bf2ff1d32f973d43f"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "related"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Introducing Our New Platform\",\n  \"author\": \"605c3f25a3e5f12d4c8b4567\",\n  \"content\": \"<h2 style=\\\"text-align: left\\\">Liberty children book donation 2024</h2><h6></h6><h3 style=\\\"text-align: left\\\">Event Description</h3><p style=\\\"text-align: left\\\"></p><p>Love and language – two forces that shape our world. Language is more than words. Love is more than emotion. They are the stories we tell, the songs we sing, the bridges we build.</p><p></p><p>At 1972Art39 x Elaka, we celebrate this fusion—where words become poetry, and love becomes expression. From the elegance of Bengali, the heartbeat of a people... To the silent, universal language of love, spoken through art, music, and human connection. Every language holds a history. Every voice carries a truth. Every heart beats to the same rhythm. Through poetry, performance, and storytelling, we honour the past, embrace the present, and dream of a future where all voices are heard.</p><p></p><p>This is not just an event. This is a movement. A celebration. A revolution of love and language.</p><p></p><p>Join us. Speak. Feel. Belong.</p>\",\n  \"summary\": \"A brief summary of the new platform launch.\",\n  \"featuredImage\": \"https://example.com/images/platform.png\",\n  \"tags\": [\"announcement\",\"platform\",\"release\"],\n  \"categories\": [\"Product\",\"News\"],\n  \"status\": \"published\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"summary\": \"An updated summary after feedback.\",\n  \"tags\": [\"announcement\",\"update\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs/6802534061e295b0a4d96ed3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"6802534061e295b0a4d96ed3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs/68360b16542e123af6905c7f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"68360b16542e123af6905c7f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment on a Blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"body\": \"Great article! Looking forward to more updates.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs/6802534061e295b0a4d96ed3/comments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"6802534061e295b0a4d96ed3",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment On a Blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"body\": \"Oops—typo fixed in my comment!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs/6802534061e295b0a4d96ed3/comments/6802546661e295b0a4d96eda",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"6802534061e295b0a4d96ed3",
+								"comments",
+								"6802546661e295b0a4d96eda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like a Blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs/6802534061e295b0a4d96ed3/like",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"6802534061e295b0a4d96ed3",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unlike a Blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs/6802534061e295b0a4d96ed3/unlike",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"6802534061e295b0a4d96ed3",
+								"unlike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Blog viewed",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/blogs/6802534061e295b0a4d96ed3/view",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"6802534061e295b0a4d96ed3",
+								"view"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Campaigns",
+			"item": [
+				{
+					"name": "get all campaigns",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/campaigns",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"campaigns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Campaign",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"sms\", // email, sms\n    \"subject\": \"Hello darknesses\",\n    \"message\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.\",\n    \"image\": \"/bucket/images/1750580975721-pexels-bertellifotografia-2608517.jpg\",\n    \"recipients\": [\n        \"01969531372\",\n        \"01817575385\",\n        \"01711044092\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/campaigns/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"campaigns",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "start Campaign",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/campaigns/6857c457c936916531a2cea9/send",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"campaigns",
+								"6857c457c936916531a2cea9",
+								"send"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rating",
+			"item": [
+				{
+					"name": "Create / Update rating",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"parentId\": \"68586fd59db1b94408333bf3\", // event / blog id\n    \"ratingFor\": \"Event\", // Event / Blog\n    \"rating\": \"2\",\n    \"comment\": \"Fine !\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/ratings",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ratings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all ratings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"parentId\": \"6854db638c8989e5ffdc9a5f\",\n    \"ratingFor\": \"Event\",\n    \"rating\": \"2.5\",\n    \"comment\": \"IT seemed good !\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/ratings",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ratings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update rating status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"approved\" // approved / rejected\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/ratings/68586dbd872fcadd06727d18/status",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"68586dbd872fcadd06727d18",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rating for Event / Blog",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"parentId\": \"6854db638c8989e5ffdc9a5f\",\n    \"ratingFor\": \"Event\",\n    \"rating\": \"2.5\",\n    \"comment\": \"IT seemed good !\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/ratings/Event/6854db638c8989e5ffdc9a5f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"Event",
+								"6854db638c8989e5ffdc9a5f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "misc",
+			"item": [
+				{
+					"name": "Get all newsletters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/newsletter",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"newsletter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all contact forms ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/contact-us",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contact-us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe to newsletter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"justin@yopmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/newsletter",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"newsletter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contact us",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"naffu al din\",\n    \"lastName\": \"din\",\n    \"phone\": \"01952525456\",\n    \"email\": \"you@yopmail.com\",\n    \"message\": \"Hello darkness my old friend\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/contact-us",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contact-us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send SMS ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://45.120.38.242/api/sendsms?api_key=01817575385.82PLqRjxDVpe1Ss8Rc&type=text&phone=8801969531372&senderid=8809604903051&message=API%20Testing",
+							"protocol": "http",
+							"host": [
+								"45",
+								"120",
+								"38",
+								"242"
+							],
+							"path": [
+								"api",
+								"sendsms"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "01817575385.82PLqRjxDVpe1Ss8Rc"
+								},
+								{
+									"key": "type",
+									"value": "text"
+								},
+								{
+									"key": "phone",
+									"value": "8801969531372"
+								},
+								{
+									"key": "senderid",
+									"value": "8809604903051"
+								},
+								{
+									"key": "message",
+									"value": "API%20Testing"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Static Files",
+			"item": [
+				{
+					"name": "upload image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/nafiz/Downloads/pexels-vincent-ma-janssen-3258240.jpg"
+								},
+								{
+									"key": "filename",
+									"value": "asdasdasd",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/media/image",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"media",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload product video",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/nafiz/Pictures/first.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/media/video",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"media",
+								"video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload user profile image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/nafiz/Pictures/Screenshots/Screenshot from 2025-01-29 03-20-03.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/media/user-image",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"media",
+								"user-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete static asset",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"path\":\"/bucket/product-videos/1736116335120-first.mp4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/upload/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"upload",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload file",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/nafiz/Documents/Binax 2.00.pdf"
+								},
+								{
+									"key": "filename",
+									"value": "asdasdasd",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/media/file",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"media",
+								"file"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Get all projects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Teach it – A Education Related Website\",\n  \"shortName\": \"Teach it\",\n  \"type\": \"Development & Case Study\",\n  \"slug\": \"teach-it\",\n  \"summary\": \"A portfolio site showcasing AI-integrated features.\",\n  \"description\": \"Teach It! is a peer-to-peer e-learning platform...\",\n  \"problemStatement\": \"Initial infra couldn’t scale.\",\n  \"solutionImplemented\": {\n    \"steps\": [\n      \"Ensure platform scalability.\",\n      \"Drive monetization.\",\n      \"Foster gamified experience.\"\n    ],\n    \"image\": \"https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg\"\n  },\n  \"visualDesign\": {\n    \"steps\": [\n      \"Color-coded progress.\",\n      \"User-friendly dashboards.\",\n      \"Mobile-first approach.\"\n    ],\n    \"image\": \"https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg\"\n  },\n  \"achievement\": {\n    \"steps\": [\n      \"Secured national funding.\",\n      \"Launched in Jan 2020.\",\n      \"Onboarded 1k+ educators.\"\n    ],\n    \"image\": \"https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg\"\n  },\n  \"featuredImage\": \"https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg\",\n  \"featuredVideo\": \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\",\n  \"gallery\": [\"https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg\"],\n  \"startDate\": \"2024-01-10\",\n  \"endDate\": \"2024-03-20\",\n  \"status\": \"completed\",\n  \"repoUrl\": \"https://gist.github.com/jsturgis/3b19447b304616f18657\",\n  \"liveUrl\": \"https://gist.github.com/jsturgis/3b19447b304616f18657\",\n  \"tags\": [\"AI\", \"Portfolio\", \"Next.js\"],\n  \"categories\": [\"Web Development\"],\n  \"authors\": [\n    { \"name\": \"Nafiz Al Deen\", \"role\": \"Lead Dev\", \"image\": \"https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg\" }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"title\": \"Teach it – An e-learning platform\"\n    // \"shortName\": \"Teach it\",\n    // \"type\": \"Development & Case Study\",\n    // \"summary\": \"A portfolio site showcasing AI-integrated features.\",\n    // \"description\": \"Teach It! is a peer-to-peer e-learning platform designed to democratize education through open course publishing, multilingual content, and intelligent community-driven features. Our team partnered with Teach It and prominent stakeholders like the Bangladesh Ministry of ICT, Banglalink Telecom, Teach for Bangladesh, and the Queen’s Commonwealth Trust to build and evolve this ambitious platform. We led the transition to a modern, scalable React/Laravel-based system, ensuring the platform could support future growth, cutting-edge features, and seamless user experience for both learners and educators.\",\n    // \"problemStatement\": \"Teach It’s initial infrastructure struggled to handle growing traffic, content scalability, and dynamic peer-to-peer interactions. The outdated tech stack hindered performance, and the platform lacked modern tools for personalized learning, interactive engagement, and global accessibility. With increasing demand from users and partners, a robust re-engineering was necessary to meet expectations and ensure long-term sustainability.\",\n    // \"solutionImplemented\": {\n    //   \"steps\": [\"Ensure platform scalability and accessibility across regions.\", \"Drive monetization and motivation for educators.\", \"Foster a dynamic, gamified community experience for learners.\"],\n    //   \"image\": \"https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660357/project-1_wvhpa1.png\"\n    // },\n    // \"visualDesign\": {\n    //   \"steps\": [\"Color-coded progress and ranking indicators.\", \"User-friendly dashboards for teachers and learners.\", \"Mobile-first approach for seamless use across devices.\",\"Multilingual toggle and accessibility-friendly fonts/icons.\",\"VR preview screens integrated within learning modules.\"],\n    //   \"image\": \"https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660383/project-2_hgy0ml.png\"\n    // },\n    // \"achievement\": {\n    //   \"steps\": [\"Secured national-level funding from the Bangladesh Ministry of ICT and Queen’s Trust Fund.\", \"Successfully launched the revamped platform in January 2020.\", \"Onboarded thousands of educators and learners within months of relaunch.\",\"Recognized as a pioneering localized learning solution in South Asia.\",\"Scalable infrastructure ready for further AI and gamification enhancements.\"],\n    //   \"image\": \"https://res.cloudinary.com/dshvkl0rt/image/upload/v1754660957/undraw_winners_fre4_1_hfyl9x.png\"\n    // },\n    // \"featuredImage\": \"https://res.cloudinary.com/dshvkl0rt/image/upload/v1754837437/ui_1_k3iqqz.webp\",\n    // \"featuredVideo\": \"https://res.cloudinary.com/dshvkl0rt/image/upload/v1754661146/Monitor_Screen_Mockup_A.3_kbp4hq.png\",\n    // \"gallery\": [\"https://example.com/gallery1.jpg\", \"https://example.com/gallery2.jpg\"],\n    // \"startDate\": \"2024-01-10\",\n    // \"endDate\": \"2024-03-20\",\n    // \"status\": \"completed\",\n    // \"repoUrl\": \"https://github.com/example/ai-portfolio\",\n    // \"liveUrl\": \"https://aiportfolio.example.com\",\n    // \"tags\": [\"AI\", \"Portfolio\", \"Next.js\"],\n    // \"categories\": [\"Web Development\"],\n    // \"authors\": [\n    //   { \"name\": \"Subir Das\", \"role\": \"Lead Developer\", \"image\": \"https://example.com/subir.jpg\" }\n    // ],\n    // \"meta\": { \"views\": 1200, \"likes\": 150 },\n    // \"metadata\": { \"title\": \"AI Portfolio\", \"description\": \"A modern AI-driven portfolio site.\" },\n    // \"likedBy\": [\"60dfefb5f12a4a001c8d4a1b\"],\n    // \"comments\": [\n    //   { \"author\": \"60dfefb5f12a4a001c8d4a1b\", \"body\": \"Amazing project!\", \"publishedAt\": \"2024-03-21T10:00:00Z\", \"replies\": [] }\n    // ],\n    // \"testimonials\": [\n    //   {\n    //     \"id\":1,\n    //      \"image\": \"https://res.cloudinary.com/dshvkl0rt/image/upload/v1754659951/Rectangle_48_jgcij9.png\", \n    //      \"comment\": \"Working with the team behind Teach It’s new platform was transformative. Their ability to translate our mission into a powerful, user-friendly, and future-ready digital experience helped us reach learners we never thought possible. The community response and growth have been beyond our expectations.\", \n    //      \"userName\": \"Frei Josef\", \n    //      \"userOccupation\": \"CEO & Founder\", \n    //      \"company\": \"Teach it\" \n    //     }\n    // ]\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/689eae947615ab1c9c098d21",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"689eae947615ab1c9c098d21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project Comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb/comments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"body\": \"This project is 🔥🔥🔥\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb/comments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project Comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"body\": \"Updated my comment after testing!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb/comments/68d09ffd59e6076c95abe9a4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb",
+								"comments",
+								"68d09ffd59e6076c95abe9a4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb/comments/68d09ffd59e6076c95abe9a4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb",
+								"comments",
+								"68d09ffd59e6076c95abe9a4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Testimonial",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"image\": \"https://example.com/testimonial.jpg\",\n  \"comment\": \"This project helped us scale massively!\",\n  \"userName\": \"Jane Doe\",\n  \"userOccupation\": \"CTO\",\n  \"company\": \"Tech Co.\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb/testimonials",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb",
+								"testimonials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project testimonials",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb/testimonials",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb",
+								"testimonials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project Testimonial",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb/testimonials/c14882bb-ca29-4395-a2ab-35a29012ef2f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb",
+								"testimonials",
+								"c14882bb-ca29-4395-a2ab-35a29012ef2f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update view",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb/views",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb",
+								"views"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like / Dislike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/projects/68d09dbb5361216be1567bdb/like",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"68d09dbb5361216be1567bdb",
+								"like"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "metadata",
+			"item": [
+				{
+					"name": "Blog metadata",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/metadata/blogs/689eae897615ab1c9c098d1e",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"metadata",
+								"blogs",
+								"689eae897615ab1c9c098d1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "project metadata",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/metadata/projects/68d09dbb5361216be1567bdb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"metadata",
+								"projects",
+								"68d09dbb5361216be1567bdb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resource",
+			"item": [
+				{
+					"name": "Get all Resources",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/resources",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resources"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Node.js asd Guide 015\",\n  \"description\": \"A compact guide to get started with Node.js for backend developers.\",\n  \"categories\": [\"backend\",\"nodejs\",\"guides\"],\n  \"tags\": [\"node\",\"javascript\",\"tutorial\"],\n  \"image\": \"/bucket/images/pexels-bertellifotografia-2608517-1758148711246.webp\",\n  \"video\": \"\",\n  \"resourceTitle\": \"Node.js Beginner Guide (PDF)\",\n  \"resourceDescription\": \"Download the PDF to follow the tutorial step-by-step.\",\n  \"featuredImage\": \"/bucket/images/pexels-vincent-ma-janssen-3258240-1758148804740.webp\",\n  \"file\": \"/bucket/files/1758148562812-Binax 2.00.pdf\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/resources",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resources"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single Resource",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/resources/nodejs-starter-guide?q=related",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resources",
+								"nodejs-starter-guide"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "related"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Resource",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Node.js Starter Guide\",\n  \"description\": \"Updated description and extra examples.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/resources/68cb38df2400515ee1463cc7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resources",
+								"68cb38df2400515ee1463cc7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Resource",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/resources/68cb38df2400515ee1463cc7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resources",
+								"68cb38df2400515ee1463cc7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"s1g@yopmail.com\",\n  \"name\": \"sg Example\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/resources/nodejs-asd-guide-015/download",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resources",
+								"nodejs-asd-guide-015",
+								"download"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download Resource file",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/resources/nodejs-starter-guide/download",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resources",
+								"nodejs-starter-guide",
+								"download"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Subscribers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/resources/get/subscribers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"resources",
+								"get",
+								"subscribers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "misc",
+			"item": [
+				{
+					"name": "Get all newsletters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/newsletter",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"newsletter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe to newsletter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"justin@yopmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/newsletter",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"newsletter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contact us",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"naffu al din\",\n    \"contact\": \"01952525456\",\n    \"email\": \"din@yopmail.com\",\n    \"interest\": \"Web Design\",\n    \"message\": \"Hello darkness my old friend\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/contact-us",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contact-us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all contact forms ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/contact-us",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contact-us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send SMS ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://45.120.38.242/api/sendsms?api_key=01817575385.82PLqRjxDVpe1Ss8Rc&type=text&phone=8801969531372&senderid=8809604903051&message=API%20Testing",
+							"protocol": "http",
+							"host": [
+								"45",
+								"120",
+								"38",
+								"242"
+							],
+							"path": [
+								"api",
+								"sendsms"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "01817575385.82PLqRjxDVpe1Ss8Rc"
+								},
+								{
+									"key": "type",
+									"value": "text"
+								},
+								{
+									"key": "phone",
+									"value": "8801969531372"
+								},
+								{
+									"key": "senderid",
+									"value": "8809604903051"
+								},
+								{
+									"key": "message",
+									"value": "API%20Testing"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{JWT}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

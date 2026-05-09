@@ -1,0 +1,206 @@
+@media (max-width: 1280px) {
+.ca-resource-details {
+    
+  @apply text-primary;
+
+     
+
+  .resource-content {
+    @apply pt-24 pb-[10rem] px-[3rem] space-y-10;
+
+    h2 {
+      @apply text-[2.4vw] font-bold text-primary;
+    }
+
+    .section {
+      h3 {
+        @apply text-[1.9vw] font-bold mb-2;
+      }
+
+      p {
+        @apply text-secondary text-[0.95vw] leading-relaxed text-justify ;
+      }
+    }
+
+    
+
+    .comparison-template{
+        @apply flex  justify-between gap-2 w-full mx-10 px-4 py-10;
+         .left{
+          @apply w-full;
+             h3 {
+        @apply text-[1.9vw] font-bold mb-2 w-full leading-8;
+      }
+
+      p {
+        @apply text-secondary text-[0.95vw] leading-relaxed text-justify mt-6 mb-8 w-full;
+      }
+           .newsletter-form {
+                @apply flex items-center gap-2 w-full;
+
+                input {
+                    @apply px-4 py-[0.53125rem] rounded-lg text-[1.05vw] text-[#9D9385] font-semibold w-full max-w-[10.5rem];
+                    border: 1px solid rgba(184, 183, 182, 0.75)
+
+                }
+
+          
+                 
+                        .btn-primary {
+        @apply px-6 py-[0.53125rem] rounded-lg text-[0.9vw] font-semibold;
+        cursor: pointer;
+        border: 1px solid transparent;
+         background: #191919;
+            color: white;
+        transition: 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background: #302d2d;
+            opacity: 0.9;
+        }
+    }
+                }
+            }
+
+         
+
+    }
+   
+
+   
+
+  }
+
+  .related-resources{
+    @apply text-[2.35vw] font-bold text-center mb-12;
+  }
+
+    .related-resources-card{
+            @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0 ;
+
+            .blogs-card{
+                @apply rounded-2xl p-4 bg-[#2E2F38];
+
+                img{
+                    @apply rounded-lg w-full h-[15.25rem] object-cover mb-4 ;
+                }
+
+                h3{
+                    @apply text-lg font-bold ;
+                }
+
+      }
+
+        }
+}
+
+}
+
+@media (max-width: 768px) {
+.ca-resource-details {
+    
+  @apply text-primary;
+
+     
+
+  .resource-content {
+    @apply px-0 pt-6 pb-12 space-y-10;
+
+    h2 {
+      @apply text-[7.7vw] font-bold text-primary;
+    }
+
+    .section {
+      h3 {
+        @apply text-[6.1vw] font-bold mb-2;
+        
+      }
+
+      p {
+        @apply text-secondary text-[3.1vw] leading-relaxed text-justify ;
+      }
+    }
+
+     .comparison-template{
+        @apply flex flex-col-reverse justify-between w-full mx-0 px-4 py-8;
+
+         .left{
+          @apply w-full mt-24;
+             h3 {
+         @apply text-[6.1vw] font-bold mb-2 w-full leading-14;
+
+  @media (max-width: 640px) {
+    @apply leading-8;
+  }
+      }
+
+      p {
+        @apply text-secondary text-[3.1vw] leading-relaxed text-justify mt-6 mb-8 w-full;
+      }
+           .newsletter-form {
+                 @apply flex flex-col items-stretch gap-4 w-full;
+
+  input {
+    @apply px-6 py-[0.53125rem] w-full max-w-full block rounded-lg text-[4.5vw] text-[#9D9385] font-semibold;
+    border: 1px solid rgba(184, 183, 182, 0.75);
+  }
+
+          
+                 
+                        .btn-primary {
+        @apply px-6 py-[0.53125rem] w-full rounded-lg text-[4.5vw] font-semibold;
+        cursor: pointer;
+        border: 1px solid transparent;
+        background: #191919;
+            color: white;
+        transition: 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background: #302d2d;
+            opacity: 0.9;
+        }
+    }
+                }
+            }
+
+            .right {
+  @apply w-full mt-6;
+  
+  img {
+    @apply block w-full;
+  }
+}
+
+    }
+
+  }
+
+  .related-resources{
+    @apply text-[9.2vw] font-bold text-center mb-12;
+  }
+
+    .related-resources-card{
+            @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0 ;
+
+            .blogs-card{
+                @apply rounded-2xl p-4 bg-[#2E2F38];
+
+                img{
+                    @apply rounded-lg w-full h-[15.25rem] object-cover mb-4 ;
+                }
+
+                h3{
+                    @apply text-lg font-bold ;
+                }
+
+                
+
+       
+
+      }
+
+        }
+}
+
+    
+}

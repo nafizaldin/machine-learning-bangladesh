@@ -1,0 +1,16 @@
+.ca-admin-page {
+    @apply grid gap-5;
+    grid-template-columns: 1fr 4fr;
+
+    .admin-top-navs {
+        grid-column: 1 / -1;
+    }
+
+    .admin-left-navs {
+        @apply min-w-[15rem] w-full h-full overflow-y-auto overflow-x-hidden max-h-[calc(100vh-3rem)];
+    }
+
+    .admin-component {
+        @apply w-full h-full overflow-y-auto overflow-x-hidden max-h-[calc(100vh-3rem)];
+    }
+}

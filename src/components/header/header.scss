@@ -1,0 +1,43 @@
+.mlb-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #dadce0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: box-shadow 0.3s ease;
+
+  &.scrolled {
+    box-shadow: 0 2px 8px rgba(60, 64, 67, 0.12);
+  }
+
+  .mlb-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .mlb-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+
+    span {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #202124;
+      letter-spacing: -0.01em;
+    }
+
+    &:hover span {
+      color: #4285F4;
+    }
+  }
+}
+
+@import './responsive-header.scss';

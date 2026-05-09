@@ -1,0 +1,450 @@
+.ca-project-details{
+  
+
+    .project{
+        @apply flex items-center justify-center ;
+        h1{
+     @apply text-secondary text-center text-lg;
+        }
+        .arrow{
+            @apply mx-1 text-secondary;
+        }
+        .project-name{
+            @apply text-primary font-bold;
+        }
+    }
+    .title{
+
+        @apply my-12  font-bold text-center flex flex-col justify-center text-[2.35vw];
+     p{
+        width: auto;
+
+     }
+    }
+    .banner-image{
+        @apply w-full ;
+    
+    }
+
+}
+
+
+.ca-project-overview{
+    .top {
+        @apply flex flex-col items-center mb-30;
+
+        h3 {
+            @apply text-[2.1vw] font-[700] mb-5;
+      
+        }
+        
+        p {
+            @apply text-[1.1vw] font-[400] text-justify; 
+            color: var(--text-color-g);
+        }
+      
+    }
+
+    .body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10rem;
+
+        .problem-statement{
+            @apply flex items-center gap-16;
+
+        
+            
+          .left-text{
+          
+              h1 {
+                @apply text-[2.35vw] font-[700] mb-5 ;
+            }
+            p {
+                @apply text-[1.1vw] font-[400] text-justify; 
+                color: var(--text-color-g);
+            }
+          
+
+          }
+       
+            
+         
+
+        }
+
+        .solutionImplemented {
+                @apply flex items-center justify-between w-full gap-[3.5rem];
+          
+            .left {
+
+                @apply w-1/2;
+                h4 {
+                    @apply text-[2.35vw] font-[700] mb-16;
+                }
+
+                ul {
+                    @apply list-none ;
+                    li {
+                        @apply flex items-center gap-2 mb-6;
+
+                        svg {
+
+                        }
+
+                        p {
+                            @apply mb-0 text-[1.05vw] font-[400];
+                            color: var(--text-color);
+                        }
+                    }
+                }
+            }
+
+          
+         
+        }
+
+        .visualDesign {
+            @apply flex items-center justify-between gap-[3.5rem] w-full;
+          
+            .right {
+              @apply w-1/2;
+                
+                h4 {
+                    @apply text-[2.35vw] font-[700] mb-16 ;
+                }
+
+                ul {
+                    @apply list-none w-full;
+                    li {
+                        @apply flex items-center gap-2 mb-6;
+
+                        svg {
+
+                        }
+
+                        p {
+                            @apply mb-0 text-[1.05vw] font-[400];
+                            color: var(--text-color);
+                        }
+                    }
+                }
+            }
+
+            .left{
+                @apply w-1/2;
+                img {
+                    @apply w-full;
+                  
+                }
+            }
+
+          
+          
+         
+         
+        }
+    }
+}
+
+
+.ca-whole-design{
+   
+     .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.5rem;
+        h1{
+            @apply text-[2.1vw] font-bold;
+        }
+        
+       
+        .video{
+           width: 100%;
+            border-radius: 1.5rem;
+        }
+    }
+}
+
+
+.ca-project-achievements{
+
+     .body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8rem;
+
+   
+
+        .section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            justify-content: space-between;
+          
+
+
+            .left {
+
+                h4 {
+                    @apply text-[2.35vw] font-[700] mb-7;
+                }
+
+                p {
+                    @apply text-[1.05vw] font-[400] mb-7;
+                    color: var(--text-color-g);
+                    line-height: 1.6;
+                }
+
+                ul {
+                    @apply list-none mb-10;
+                    li {
+                        @apply flex items-center gap-2 mb-3;
+
+
+                        p {
+                            @apply mb-0 text-[1.05vw] font-[400];
+                            color: var(--text-color);
+                        }
+                    }
+                }
+            }
+          
+           
+        }
+    }
+
+}
+
+.ca-testimonial {
+     
+    .top {
+        @apply flex flex-col items-center mb-16 text-center;
+
+        h3 {
+            @apply text-[2.1vw] font-[700];
+        }
+    }
+
+    .body {
+        // display: grid;
+        place-items: center;
+        
+
+        .ca-carousel {
+            padding: 0 12.4375rem;
+            height: auto;
+            position: relative;
+            
+            .wrapper {
+                height: 100%;
+                width: 100%;
+                
+            }
+
+            .button-cont  {
+            
+                width: 100%;
+                margin: 0;
+         
+
+                .prev {
+                    position: absolute;
+                    left: 8%;
+                
+                          top: 50%;
+    transform: translateY(-50%);
+                }
+
+                .next {
+                    position: absolute;
+                    right: 8%;
+                  
+                          top: 50%;
+    transform: translateY(-50%);
+                }
+            }
+
+           .box {
+  width: 100%;
+  max-width: 100%;
+  
+  box-sizing: border-box;
+  padding: 1.5rem;
+
+  background: var(--bg-light);
+  border-radius: 32px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+//   border: 1px solid rgba(46, 47, 56, 0.79);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+                &.box00 {
+                    position: relative;
+
+                    .svg-icon1 {
+                        position: absolute;
+                        left: -10rem;
+                        top: -10rem;
+                    }
+                    
+                    .box__inner {
+                        display: flex;
+                        gap: 2rem;
+                        grid-template-columns: 35% 65%;
+
+                        img {
+                            filter: grayscale(1);
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            border-radius: 28px;
+                            transition: all 0.2s ease;
+                        }
+                    }
+
+                
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    height: 100%;
+                    padding: .5rem 0;
+
+                    h5 {
+                        @apply text-[1.2vw] font-[400] mb-8 leading-[1.6];
+                        font-style: italic;
+                        color: var(--text-color-g);
+                    }
+
+                    h6 {
+                        @apply text-[1.05vw] font-[700] mb-2;
+                        color: var(--text-color);
+                    }
+
+                    p {
+                        @apply text-[0.95vw] font-[400];
+                        color: var(--text-color);
+                    }
+                }
+            }
+        }
+
+         .carousel-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 2rem;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background: #616161;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+
+            &.active {
+            width: 34px;
+            height: 8px;
+            background: #fff; 
+            opacity: 1;
+            border-color: #fff; 
+            transform: scale(1.05);
+            }
+
+            
+
+            &:hover {
+            transform: scale(1.15);
+            opacity: 1;
+            }
+        }
+        }
+}
+
+
+    }
+
+.ca-other-projects {
+ 
+    .center {
+ 
+        width: 100%;
+
+        h1{
+            @apply text-[2.1vw] font-bold text-center mb-12;
+        }
+
+        .ca-carousel {
+            width: 100%;
+       
+            // height: auto;
+
+            .wrapper {
+                // height: 22rem;
+                // max-height: unset;
+            }
+
+            .button-cont  {
+               @apply my-[2rem];
+            }
+
+            .box {
+                width: 30%;
+
+                &.box00 {
+                    position: relative;
+                    width: 30%;
+                    .box__inner {
+                        overflow: hidden;
+                     
+                    }
+
+                    img {
+                        filter: grayscale(1);
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        transition: all 0.5s ease;
+                    }
+
+                    h5 {
+                        position: absolute;
+                        bottom: 5px;
+                        left: 50%;
+                        transform: translateX(-45%);
+                        width: 100%;
+                       
+                        font-size: 16px;
+                    }
+    
+                    &:hover {
+                        
+                        img {
+                            filter: grayscale(0);
+                            transform: scale(1.1);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@import './responsive-project-details.scss'

@@ -1,0 +1,51 @@
+.ca-login {
+  @apply flex flex-col items-center justify-center min-h-screen text-gray-900 gap-12; // text-primary -> dark color replaced by gray-900 for light mode
+
+  .logo-link {
+    @apply flex items-center justify-center gap-2 cursor-pointer;
+
+    img {
+      width: 55px;
+      height: 55px;
+    }
+
+    h1 {
+      @apply text-[2.75rem] font-bold text-gray-900; 
+    }
+  }
+
+  .form {
+    @apply flex flex-col w-full max-w-2xl gap-3 mx-auto;
+
+    div {
+      input {
+        @apply w-full p-4 text-gray-900 rounded-[12px] bg-white border border-gray-300 focus:outline-none focus:border-purple-500 text-sm placeholder-gray-400 text-[0.875rem];
+      }
+
+      p {
+        @apply text-red-500 text-xs mt-1;
+      }
+    }
+
+    a.forgot-password {
+      @apply text-[0.875rem] hover:underline text-left;
+      color: var(--color-secondary),
+    }
+
+    .submit-wrapper {
+      @apply flex justify-center mt-3;
+
+      button {
+        @apply w-[10.125rem] py-4 rounded-[12px] flex items-center justify-center gap-3;
+        background: #191919; 
+        color: #ffffff;     
+        transition: background 0.3s ease, opacity 0.3s ease;
+
+        // &:hover {
+        //   background: #292828; ;
+        //   opacity: 0.9;
+        // }
+      }
+    }
+  }
+}

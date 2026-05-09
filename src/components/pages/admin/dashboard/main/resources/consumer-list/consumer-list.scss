@@ -1,0 +1,22 @@
+.resource-consumer {
+  @apply rounded-full w-[6.25rem] h-[2.125rem] flex items-center justify-center text-sm font-normal border;
+
+
+  background-color: #34C7591A; 
+  border-color: #34C759; 
+  color: #191919; 
+
+  &.download {
+
+    background-color: #34C7591A;
+    border-color: #34C759;
+    color: #191919;
+  }
+
+ 
+  &.dark {
+    background-color: #34C75933;
+    border-color: #34C759;
+    color: #fff;
+  }
+}

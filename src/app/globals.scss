@@ -1,0 +1,258 @@
+/* globals.scss */
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --bg-light: #f8f9fa;
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* ML Bangladesh — Google Material palette */
+  --background: #ffffff;
+  --foreground: #202124;
+
+  --card: #ffffff;
+  --card-foreground: #202124;
+  --popover: #ffffff;
+  --popover-foreground: #202124;
+
+  /* primary = dark heading/text color */
+  --primary: #202124;
+  --primary-foreground: #ffffff;
+
+  /* secondary = Google gray for body text */
+  --secondary: #5f6368;
+  --secondary-foreground: #202124;
+
+  --muted: #f8f9fa;
+  --muted-foreground: #5f6368;
+  --accent: #e8f0fe;
+  --accent-foreground: #1967d2;
+  --destructive: #EA4335;
+  --border: #dadce0;
+  --input: #dadce0;
+  --ring: #4285F4;
+
+  /* Google brand accent colors */
+  --brand: #4285F4;
+  --google-blue: #4285F4;
+  --google-red: #EA4335;
+  --google-yellow: #FBBC04;
+  --google-green: #34A853;
+
+  /* Font sizes */
+  --font-heading-56: clamp(2rem, 5vw + 1rem, 3.5rem);
+  --font-heading-48: clamp(1.75rem, 4vw + 0.5rem, 3rem);
+  --font-subheading-24: clamp(1.125rem, 2vw + 0.5rem, 1.5rem);
+  --font-text-20: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+  --font-text-18: clamp(1rem, 0.5vw + 0.75rem, 1.125rem);
+  --font-text-16: clamp(0.875rem, 1vw + 0.25rem, 1rem);
+  --font-text-14: clamp(0.75rem, 0.8vw + 0.25rem, 0.875rem);
+  --font-text-12: clamp(0.625rem, 0.5vw + 0.25rem, 0.75rem);
+  --font-text-10: clamp(0.55rem, 0.4vw + 0.2rem, 0.625rem);
+
+  --bg-light: #f8f9fa;
+
+  /* Admin sidebar — Google Blue theme */
+  --sidebar: #f8f9fa;
+  --sidebar-foreground: #202124;
+  --sidebar-primary: #4285F4;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8f0fe;
+  --sidebar-accent-foreground: #1967d2;
+  --sidebar-border: #dadce0;
+  --sidebar-ring: #4285F4;
+
+  /* Chart colors — Google palette */
+  --chart-1: #4285F4;
+  --chart-2: #34A853;
+  --chart-3: #FBBC04;
+  --chart-4: #EA4335;
+  --chart-5: #1a73e8;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-google-sans), 'Google Sans', Arial, sans-serif;
+    color: #202124;
+  }
+
+  h1, .heading-56 {
+    font-size: var(--font-heading-56);
+    font-weight: 700;
+    line-height: 100%;
+    color: #202124;
+  }
+
+  .heading-48 {
+    font-size: var(--font-heading-48);
+    font-weight: 700;
+    line-height: 110%;
+    color: #202124;
+  }
+
+  h2, .subheading-24 {
+    font-size: var(--font-subheading-24);
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  .text-20 {
+    font-size: var(--font-text-20);
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .text-18 {
+    font-size: var(--font-text-18);
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  p, .text-16 {
+    font-size: var(--font-text-16);
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .text-14 {
+    font-size: var(--font-text-14);
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .text-12 {
+    font-size: var(--font-text-12);
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .text-10 {
+    font-size: var(--font-text-10);
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+@layer utilities {
+  .component-gap-y { margin-top: 7.5rem; }
+  .component-gap-x { padding: 0 6rem; }
+
+  @media (max-width: 1024px) {
+    .component-gap-y { margin-top: 5rem; }
+    .component-gap-x { padding: 0 4rem; }
+  }
+
+  @media (max-width: 768px) {
+    .component-gap-y { margin-top: 3rem; }
+    .component-gap-x { padding: 0 2rem; }
+  }
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.gradient-opacity-mask {
+  mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+}
+
+/* Swiper */
+.mySwiper {
+  padding-bottom: 4rem;
+}
+.mySwiper .swiper-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  margin-top: 16px !important;
+  text-align: center;
+}
+.custom-bullet {
+  background-color: #dadce0;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 6px;
+  border-radius: 50%;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+.custom-bullet-active {
+  background-color: #4285F4 !important;
+  transform: scale(1.1);
+}
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    display: none;
+  }
+}
+
+@import '@/components/utilityComponents/editor/editor-styles.scss';
+@import '@/components/header/header.scss';
+@import '@/components/footer/footer.scss';
+@import '@/components/pages/projects/project-details/project-details.scss';
+@import '@/components/pages/blogs/blog-details/blog-details.scss';
+@import '@/components/pages/contact/contact.scss';
+@import '@/components/pages/resources/resource-details/resource-details.scss';
+@import '@/components/pages/ca-admin/login/login.scss';
+@import '@/components/pages/admin/styles.scss';
+@import '@/components/pages/admin/dashboard/main/subscriber-list/subscriber-list.scss';
+@import '@/components/pages/admin/dashboard/main/role-list/role-list.scss';
+@import '@/components/pages/admin/dashboard/main/resources/consumer-list/consumer-list.scss';
+@import '@/components/pages/admin/dashboard/main/resources/create-new-resource/create-new-resource.scss';
+@import '@/components/pages/case-studies/case-studies.scss';
+@import '@/components/pages/case-studies/case-study-details/case-study-details.scss';

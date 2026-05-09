@@ -1,0 +1,130 @@
+.ca-case-study-details {
+  @apply min-h-screen py-14 px-6 flex flex-col gap-6 text-[#191919] bg-white dark:bg-[#191919] dark:text-white;
+
+  .ca-testimonial {
+    overflow: hidden;
+
+    .body {
+      .ca-carousel {
+        .box {
+          min-width: 40rem;
+          max-width: 60rem;
+          width: 100%;
+
+          .right {
+            h5 {
+              @apply mb-auto pb-4;
+              color: inherit; 
+            }
+          }
+
+          &.box00 {
+            .box__inner {
+              display: grid;
+              grid-template-columns: 1fr 2fr;
+
+              img {
+                @apply w-auto h-80 object-contain;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .labs {
+    @apply flex justify-between items-center;
+
+    label {
+      @apply text-sm font-medium leading-10;
+      color: inherit;
+    }
+
+    .resource-btn {
+      @apply flex-1 bg-gradient-to-r from-purple-300 to-pink-300 rounded-full py-3 cursor-pointer text-[#191919] dark:text-white;
+    }
+  }
+
+  .cs-box-outer {
+    .cs-box-inner {
+      @apply grid gap-4 items-center;
+
+      &.cs-1\/2 { grid-template-columns: 1fr 2fr; }
+      &.cs-2\/1 { grid-template-columns: 2fr 1fr; }
+      &.cs-1\/3 { grid-template-columns: 1fr 3fr; }
+      &.cs-3\/1 { grid-template-columns: 3fr 1fr; }
+    }
+  }
+
+  .resource-page {
+    @apply flex flex-col gap-2;
+
+    input, textarea, select {
+      @apply w-full p-3 border border-gray-300 rounded-lg bg-white text-[#191919] dark:bg-[#25272D] dark:text-white;
+    }
+
+    textarea {
+      @apply min-h-40 resize-none rounded-3xl;
+    }
+
+    label {
+      color: inherit;
+    }
+  }
+
+  .main-img,
+  .main-desc {
+    @apply flex flex-col gap-2;
+  }
+
+  .cate-tags {
+    @apply flex gap-4;
+
+    .cate {
+      @apply flex-1 flex flex-col gap-2;
+
+      select {
+        @apply w-full p-3 border border-gray-300 rounded-full appearance-none bg-white text-[#191919] dark:bg-[#25272D] dark:text-white;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M13 1.00005C13 1.00005 8.5811 7 7 7C5.4188 7 1 1 1 1' stroke='%23707786' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        background-size: 14px 8px;
+      }
+    }
+
+    .tags {
+      @apply flex-1 flex flex-col gap-2;
+
+      input {
+        @apply w-full p-3 rounded-full flex-1 min-w-12 bg-white text-[#191919] dark:bg-[#25272D] dark:text-white;
+      }
+    }
+  }
+
+  .resource-title,
+  .resource-description {
+    @apply flex flex-col gap-2;
+
+    input, textarea {
+      @apply w-full p-3 border border-gray-300 rounded-lg bg-white text-[#191919] dark:bg-[#25272D] dark:text-white;
+    }
+
+    textarea {
+      @apply resize-none rounded-2xl;
+    }
+  }
+
+  .featured-image,
+  .featured-file {
+    @apply flex flex-col gap-2;
+  }
+
+  .btn {
+    @apply flex gap-4;
+
+    .resource-btn {
+      @apply flex-1 bg-gradient-to-r from-purple-300 to-pink-300 rounded-full py-3 cursor-pointer text-[#191919] dark:text-white;
+    }
+  }
+}

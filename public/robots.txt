@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /dashboard/admin
+Disallow: /dashboard/admin/*
+Disallow: /dashboard/admin/**
+
+# Host
+Host: https://codealign.co
+
+# Sitemaps
+Sitemap: https://codealign.co/sitemap.xml

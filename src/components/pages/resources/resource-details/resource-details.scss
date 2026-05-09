@@ -1,0 +1,147 @@
+.ca-resource-details {
+  
+  @apply text-primary;
+
+      .banner-image {
+   
+          @apply rounded-xl shadow-lg w-full;
+      
+    }
+  
+
+  .resource-content {
+    @apply pt-24 px-[6.90625rem] space-y-10;
+
+    h2 {
+      @apply text-2xl md:text-3xl font-bold text-primary;
+    }
+
+    .section {
+      h1, h2, h3, h4, h5, h6 {
+        @apply font-bold mb-3 mt-6;
+      }
+      
+      h1 {
+        @apply text-3xl;
+      }
+
+      h2 {
+        @apply text-2xl;
+      }
+
+       h3 {
+        font-size:  var(--font-subheading-24);
+      }
+
+      h4 {
+        @apply text-lg;
+      }
+
+      h5 {
+        @apply text-base;
+      }
+
+      h6 {
+        @apply text-sm;
+      }
+
+       p {
+        @apply text-secondary leading-relaxed text-justify mb-6;
+      }
+    }
+
+    .tags {
+      @apply pt-4 capitalize;
+
+      strong {
+        @apply font-semibold text-base mr-2;
+      }
+
+
+    }
+    .hr{
+        @apply w-full h-px bg-[#2E2F38]/60;
+    }
+
+    .comparison-template {
+      @apply flex justify-between mx-16 px-6 py-12 bg-[#F7F7F7] rounded-lg;
+
+      .left {
+        @apply w-[60%];
+
+        h3 {
+          @apply text-xl font-bold mb-2 w-[23.1875rem] leading-8;
+        }
+
+        p {
+          @apply text-secondary leading-relaxed text-justify mt-6 mb-8 w-[23.1875rem] ;
+        }
+
+        .newsletter-form {
+          @apply flex items-center w-full gap-3;
+
+          input {
+            @apply px-4 py-3 rounded-lg text-[1rem] text-[#9D9385] font-semibold w-full max-w-[20rem];
+            border: 1px solid rgba(184, 183, 182, 0.75);
+          }
+
+
+
+          .btn-primary {
+            @apply px-6 py-3 rounded-lg text-lg font-semibold;
+            cursor: pointer;
+            border: 1px solid transparent;
+            background: #191919;
+            color: white;
+            transition: 0.3s ease, color 0.3s ease;
+
+            &:hover {
+              background: #302d2d;
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+
+      .right {
+        @apply w-[40%] overflow-hidden;
+
+        img{
+            @apply rounded-lg w-full h-auto object-cover h-[100%];
+        }
+      }
+
+
+
+    }
+   
+
+  }
+
+
+  .related-resources {
+    @apply text-[2.35vw] font-bold text-center mb-12 mt-12;
+  }
+
+    .related-resources-card {
+            @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 ;
+
+            .resources-card {
+                @apply rounded-2xl p-4 bg-[#2E2F38];
+
+                img{
+                    @apply rounded-lg w-full h-[15.25rem] object-cover mb-4 ;
+                }
+
+                h3{
+                    @apply text-lg font-bold mb-3 cursor-pointer hover:underline;
+                }
+
+
+
+      }
+
+        }
+}
+
+@import './responsive-resource-details.scss'

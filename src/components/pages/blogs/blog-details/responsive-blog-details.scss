@@ -1,0 +1,139 @@
+@media (max-width: 1280px) {
+.ca-blog-details {
+  
+  @apply text-primary;
+
+     
+
+  .blog-content {
+    @apply pt-24 pb-[10rem] px-[5.90625rem] space-y-10;
+
+    h2 {
+      @apply text-[2.4vw] font-bold text-white;
+    }
+
+    .section {
+      h3 {
+        @apply text-[1.9vw] font-bold mb-2;
+      }
+
+      p {
+        @apply text-secondary text-[0.95vw] leading-relaxed text-justify ;
+      }
+    }
+
+
+   
+
+  }
+
+  .related-blogs{
+    @apply text-[2.35vw] font-bold text-center mb-12;
+  }
+
+    .related-blogs-card{
+            @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0 ;
+
+            .blogs-card{
+                @apply rounded-2xl p-4 bg-[#2E2F38];
+
+                img{
+                    @apply rounded-lg w-full h-[15.25rem] object-cover mb-4 ;
+                }
+
+                h3{
+                    @apply text-lg font-bold ;
+                }
+
+                
+
+            .author{
+                @apply flex justify-between mt-3 mb-4;
+                
+                h1{
+                    @apply text-[1.05vw] text-[#C138D9];
+                }
+                p{
+                    @apply text-[1.05vw] text-[#B892FF]
+                }
+                 }
+   
+
+
+      }
+
+        }
+}
+
+}
+
+@media (max-width: 768px) {
+.ca-blog-details {
+  
+  @apply text-primary;
+
+     
+
+  .blog-content {
+    @apply px-0 pt-6 pb-12 space-y-10;
+
+    h2 {
+      @apply text-[7.7vw] font-bold text-primary;
+    }
+
+    .section {
+      h3 {
+        @apply text-[6.1vw] font-bold mb-2;
+        
+      }
+
+      p {
+        @apply text-secondary text-[3.1vw] leading-relaxed text-justify ;
+      }
+    }
+
+
+   
+
+  }
+
+  .related-blogs{
+    @apply text-[9.2vw] font-bold text-center mb-12;
+  }
+
+    .related-blogs-card{
+            @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0 ;
+
+            .blogs-card{
+                @apply rounded-2xl p-4 bg-[#2E2F38];
+
+                img{
+                    @apply rounded-lg w-full h-[15.25rem] object-cover mb-4 ;
+                }
+
+                h3{
+                    @apply text-lg font-bold ;
+                }
+
+                
+
+            .author{
+                @apply flex justify-between mt-3 mb-4;
+                
+                h1{
+                    @apply text-[4.1vw] text-[#C138D9];
+                }
+                p{
+                    @apply text-[4.1vw] text-[#B892FF]
+                }
+                 }
+   
+
+
+      }
+
+        }
+}
+
+    
+}

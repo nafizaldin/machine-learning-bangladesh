@@ -1,0 +1,103 @@
+.ca-blog-details {
+  
+  @apply text-primary ;
+
+      .banner-image {
+   
+          @apply rounded-xl shadow-lg w-full;
+      
+    }
+  
+
+  .blog-content {
+    @apply pt-24 px-[6.90625rem] space-y-10;
+
+    h2 {
+      @apply text-2xl md:text-4xl font-bold text-primary;
+    }
+
+    .section {
+      h1, h2, h3, h4, h5, h6 {
+        @apply font-bold mb-3 mt-6;
+      }
+      
+      h1 {
+        @apply text-3xl;
+      }
+
+      h2 {
+        @apply text-2xl;
+      }
+
+      h3 {
+        font-size:  var(--font-subheading-24);
+      }
+
+      h4 {
+        @apply text-lg;
+      }
+
+      h5 {
+        @apply text-base;
+      }
+
+      h6 {
+        @apply text-sm;
+      }
+
+      p {
+        @apply text-secondary leading-relaxed text-justify mb-6;
+      }
+    }
+
+    .tags {
+      @apply pt-4 capitalize;
+
+      strong {
+        @apply font-semibold text-base mr-2;
+      }
+    }
+
+   
+
+  }
+
+  .related-blogs{
+    @apply text-[2.35vw] font-bold text-center mb-12;
+  }
+
+    .related-blogs-card{
+            @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 ;
+
+            .blogs-card{
+                @apply rounded-2xl p-4 bg-[#2E2F38];
+
+                img{
+                    @apply rounded-lg w-full h-[15.25rem] object-cover mb-4 ;
+                }
+
+                h3{
+                    @apply text-lg font-bold ;
+                }
+
+                
+
+            .author{
+                @apply flex justify-between mt-3 mb-4;
+                
+                h1{
+                    @apply text-[1.05vw] text-[#C138D9];
+                }
+                p{
+                    @apply text-[1.05vw] text-[#B892FF]
+                }
+                 }
+   
+
+
+      }
+
+        }
+}
+
+@import './responsive-blog-details.scss'

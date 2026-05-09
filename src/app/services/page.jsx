@@ -1,0 +1,54 @@
+import { MetaDataBuilder } from '@/classes';
+import Insight from '@/components/pages/landing/Insight';
+import Process from '@/components/pages/landing/Process';
+import Services from '@/components/pages/landing/Services';
+import TalkProjectBanner from '@/components/pages/landing/TalkProjectBanner';
+import Testimonial from '@/components/pages/landing/Testimonial';
+import ServicesHero from '@/components/pages/services/ServicesHero';
+import React from 'react'
+
+
+ export async function generateMetadata() {
+    const baseurl = process.env.NEXT_PUBLIC_BASE_URL;
+    const _signature = process.env.NEXT_PUBLIC_SIGN || '';
+    
+    let data = {
+      title: "Orifine | Services",
+      description: "Orifine - Your Digital Companion",
+    };
+
+    try {
+        const res = await fetch(`${baseurl}/metadata/services`, {
+          cache: "no-store",
+          headers: {
+            'x-client-sign': _signature,
+          }
+        });
+       
+        if (!res?.ok) {
+          return new MetaDataBuilder(data).build();
+        }
+        data = await res.json();
+      
+        return new MetaDataBuilder(data).build()
+    } catch (err) {
+        
+        return new MetaDataBuilder(data).build();
+    }
+  }
+
+
+const servicesPage = () => {
+  return (
+    <div>
+      <ServicesHero/>
+    <Services/>
+      <Process/>
+          <TalkProjectBanner/>
+          <Insight/>
+          <Testimonial/>
+    </div>
+  )
+}
+
+export default servicesPage
