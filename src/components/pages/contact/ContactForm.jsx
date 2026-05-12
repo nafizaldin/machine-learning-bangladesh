@@ -34,12 +34,12 @@ const ContactForm = () => {
   };
 
   const [categories, setCategories] = useState([
-    { name: "Web Design", value: "web-design" },
-    { name: "Products & SaaS", value: "products-saas" },
-    { name: "UI UX Design", value: "ui-ux-design" },
-    { name: "Graphics Design", value: "graphics-design" },
-    { name: "Development", value: "development" },
-    { name: "Digital Marketing", value: "digital-marketing" },
+    { name: "Machine Learning", value: "machine-learning" },
+    { name: "Deep Learning", value: "deep-learning" },
+    { name: "NLP", value: "nlp" },
+    { name: "Computer Vision", value: "computer-vision" },
+    { name: "Data Science", value: "data-science" },
+    { name: "Events & Workshops", value: "events-workshops" },
     { name: "Others", value: "others" },
   ]);
 
@@ -47,7 +47,7 @@ const ContactForm = () => {
 
   return (
     <div className="right">
-      <p>I’m interested in...</p>
+      <p>I&apos;m interested in...</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <div className="interest">

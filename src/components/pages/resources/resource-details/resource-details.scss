@@ -60,7 +60,7 @@
 
     }
     .hr{
-        @apply w-full h-px bg-[#2E2F38]/60;
+        @apply w-full h-px bg-[#dadce0];
     }
 
     .comparison-template {
@@ -91,12 +91,12 @@
             @apply px-6 py-3 rounded-lg text-lg font-semibold;
             cursor: pointer;
             border: 1px solid transparent;
-            background: #191919;
+            background: #4285F4;
             color: white;
             transition: 0.3s ease, color 0.3s ease;
 
             &:hover {
-              background: #302d2d;
+              background: #1967d2;
               opacity: 0.9;
             }
           }
@@ -127,7 +127,7 @@
             @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 ;
 
             .resources-card {
-                @apply rounded-2xl p-4 bg-[#2E2F38];
+                @apply rounded-2xl p-4 bg-white border border-[#dadce0];
 
                 img{
                     @apply rounded-lg w-full h-[15.25rem] object-cover mb-4 ;

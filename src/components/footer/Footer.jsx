@@ -56,18 +56,18 @@ const Footer = () => {
             </form>
           </div>
           <div className="r-4 text-secondary">
-            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <Link href="https://www.facebook.com/MLBangladesh0" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebookSquare />
             </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Link href="https://www.linkedin.com/company/ml-bangladesh" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            {/* <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram />
-            </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
+            </Link> */}
+            {/* <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
               <FaSquareXTwitter />
-            </Link>
+            </Link> */}
           </div>
         </div>
 
@@ -114,6 +114,9 @@ const Footer = () => {
       <div className="copyright">
         <hr className="white-line" />
         <p>Copyright &copy; 2025 Machine Learning Bangladesh &mdash; Founded September 2023</p>
+        <p className="text-sm sm:text-base">
+          Powered by <a href="https://codealign.co" target="_blank" rel="nofollow noreferrer" className="font-semibold text-current hover:underline hover:text-[#4285f4] transition-colors">CodeAlign</a>
+        </p>
       </div>
     </footer>
   );

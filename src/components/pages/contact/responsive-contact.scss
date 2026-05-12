@@ -6,9 +6,9 @@
     @apply text-[2.85vw];
 }
 .ca-contact {
-    @apply bg-[#25272D] ;
+    @apply bg-[#f8f9fa] ;
     border-radius: 28px;
-    
+
 
     .center {
     @apply flex items-center gap-[2.125rem] p-8 ;
@@ -60,7 +60,7 @@
             @apply py-16 space-y-16 ;
 
             .input-textarea{
-                @apply w-full bg-transparent border-b border-gray-500 focus:outline-none text-white placeholder-gray-400 py-2;
+                @apply w-full bg-transparent border-b border-gray-500 focus:outline-none text-[#202124] placeholder-gray-400 py-2;
             }
         }
         button{
@@ -85,7 +85,7 @@
             padding-top: 0;
 }
 .ca-contact {
-    @apply bg-[#25272D] min-h-screen ;
+    @apply bg-[#f8f9fa] min-h-screen ;
     border-radius: 28px;
 
     .center {
@@ -138,7 +138,7 @@
             @apply py-16 space-y-16 ;
 
             .input-textarea{
-                @apply w-full bg-transparent border-b border-gray-500 focus:outline-none text-white placeholder-gray-400 py-2;
+                @apply w-full bg-transparent border-b border-gray-500 focus:outline-none text-[#202124] placeholder-gray-400 py-2;
             }
         }
     .btn{

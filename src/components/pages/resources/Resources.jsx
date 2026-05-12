@@ -115,18 +115,18 @@ const Resources = () => {
       {/* Header */}
       <div className="text-center max-w-[745px] mx-auto mb-16">
         <h1 className="heading-56 text-primary leading-tight">
-          Resources to Inspire, Educate & Empower
+          Resources to Learn, Grow &amp; Build
         </h1>
         <p className="subheading-24 text-secondary mt-3">
-          Guides, insights, and tools to help businesses, designers, and
-          developers stay ahead in the digital world.
+          Curated guides, datasets, tools, and learning materials to help
+          you advance in Machine Learning and AI.
         </p>
       </div>
 
       {/* Tabs Section */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
         <h2 className="heading-56 text-primary mb-4 lg:mb-0">
-          Our Knowledge Hub
+          Knowledge Hub
         </h2>
 
         <div className="flex items-center gap-2 w-full lg:w-auto justify-between">
@@ -154,7 +154,7 @@ const Resources = () => {
                 onClick={() => onCategoryClick(tab)}
                 className={`whitespace-nowrap px-5 py-3 rounded-full text-sm transition-all duration-200 ${
                   selectedCategory === tab
-                    ? "bg-primary text-white font-semibold"
+                    ? "bg-[#4285F4] text-white font-semibold"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
