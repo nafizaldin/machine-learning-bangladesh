@@ -2,7 +2,7 @@ import { cookieUtils } from '@/utils/cookie';
 import axios from 'axios';
 
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://service-orifine.codealign.co';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://service-mlb.codealign.co';
 const _signature = process.env.NEXT_PUBLIC_SIGN || '';
 const prefix = '/api';
 
