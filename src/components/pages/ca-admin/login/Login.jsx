@@ -34,10 +34,9 @@ export default function LoginPage() {
       <Image
         src="/logo.png"
         alt="logo"
-        width={77}
-        height={55}
+        width={100}
+        height={30}
       />
-      <h1>Orifine</h1>
     </div>
   </Link>
 
