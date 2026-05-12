@@ -20,12 +20,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Build-time env vars (baked into the bundle)
-ARG NEXT_PUBLIC_BASE_URL=http://localhost:5005
-ARG NEXT_PUBLIC_SIGN=
-ARG SITE_URL=http://localhost:3000
-ENV NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
-ENV NEXT_PUBLIC_SIGN=${NEXT_PUBLIC_SIGN}
-ENV SITE_URL=${SITE_URL}
+ENV NEXT_PUBLIC_BASE_URL=https://service-mlb.codealign.co
+ENV NEXT_PUBLIC_SIGN=!@#34*&^%$#@!@#$%^&*()_+|:?>
+ENV SITE_URL=https://machine-learning-bangladesh.codealign.co
 ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN pnpm run build

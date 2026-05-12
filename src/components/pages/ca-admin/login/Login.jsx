@@ -32,9 +32,9 @@ export default function LoginPage() {
   <Link href="/">
     <div className="logo-link">
       <Image
-        src="/monogram.svg"
+        src="/logo.png"
         alt="logo"
-        width={55}
+        width={77}
         height={55}
       />
       <h1>Orifine</h1>

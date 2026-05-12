@@ -30,7 +30,7 @@ export function NavUser() {
 
   function onLogout() {
     logout();
-    window.location.href = "/orifine-admin";
+    window.location.href = "/admin";
   }
 
   return (

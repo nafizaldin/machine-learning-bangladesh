@@ -13,7 +13,7 @@ const AuthChecker = () => {
 
   async function checkUser() {
     const [resp, err] = await authSnap.reAuthorizeWithToken();
-    if (pathname.includes('admin/') && !pathname.includes('orifine-admin')) {
+    if (pathname.includes('admin/') && !pathname.includes('admin')) {
       if (err || !resp) {
         toast.error(err);
         router.replace('/');
@@ -22,7 +22,7 @@ const AuthChecker = () => {
 
       if (resp && !['super_admin','admin', 'account_department', 'publisher_department'].includes(resp.role)) {
         toast.error('You are not authorized to access this page');
-        router.replace('/orifine-admin');
+        router.replace('/admin');
         return;
       }
     }
