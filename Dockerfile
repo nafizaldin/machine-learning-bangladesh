@@ -20,9 +20,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Build-time env vars (baked into the bundle)
-ENV NEXT_PUBLIC_BASE_URL=https://service-mlb.codealign.co
+ENV NEXT_PUBLIC_BASE_URL=https://service.mlbangladesh.org
 ENV NEXT_PUBLIC_SIGN=!@#34*&^%$#@!@#$%^&*()_+|:?>
-ENV SITE_URL=https://machine-learning-bangladesh.codealign.co
+ENV SITE_URL=https://mlbangladesh.org
 ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN pnpm run build
