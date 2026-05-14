@@ -10,7 +10,7 @@ export default async function Head() {
 
   return (
     <>
-      <title>Orifine</title>
+      <title>Machine Learning Bangladesh</title>
 
       {/* GOOGLE TAG MANAGER (HEAD) */}
       {GTM_ID && (

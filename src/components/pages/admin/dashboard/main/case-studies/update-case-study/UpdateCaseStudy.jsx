@@ -291,7 +291,7 @@ export default function UpdateCaseStudy() {
       categories: [category],
       testimonials: testimonials,
       authors: [
-        { name: "Orifine", role: "", image: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" }
+        { name: "ML Bangladesh", role: "", image: "" }
       ]
     };
     try {
@@ -334,7 +334,7 @@ export default function UpdateCaseStudy() {
     categories: [category],
     testimonials,
     authors: [
-      { name: "Orifine", role: "", image: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" }
+      { name: "ML Bangladesh", role: "", image: "" }
     ]
   };
 
@@ -497,7 +497,7 @@ export default function UpdateCaseStudy() {
         </div>
         <br /> <br />
        <div className="labs">
-  <label className="text-gray-900 dark:text-white">Edit/Add Testimonials (image 1:1, 3000×3000 px)</label>
+  <label className="text-[#202124]">Edit/Add Testimonials (image 1:1, 3000×3000 px)</label>
   
   <Dialog.Root open={testimonialOpen} onOpenChange={setTestimonialOpen}>
     <Dialog.Trigger asChild>
@@ -515,9 +515,9 @@ export default function UpdateCaseStudy() {
 
     <Dialog.Portal>
       {/* Dark/light overlay */}
-      <Dialog.Overlay className="fixed inset-0 bg-black/40 dark:bg-black/60 z-50" />
+      <Dialog.Overlay className="fixed inset-0 bg-black/40 z-50" />
 
-      <Dialog.Content className="fixed z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-[#191919] rounded-lg p-6 w-[40rem] shadow-lg text-gray-900 dark:text-white">
+      <Dialog.Content className="fixed z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-6 w-[40rem] shadow-lg text-[#202124]">
         <Dialog.Title className="text-lg font-bold pb-4">Add/Edit Testimonial (image 1:1, 3000×3000 px)</Dialog.Title>
 
         <div className="flex gap-4">
@@ -540,7 +540,7 @@ export default function UpdateCaseStudy() {
                 onChange={(e) =>
                   setTestimonial((t) => ({ ...t, comment: e.target.value }))
                 }
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg resize-none bg-white dark:bg-[#25272D] text-gray-900 dark:text-white"
+                className="w-full p-3 border border-[#dadce0] rounded-lg resize-none bg-white text-[#202124]"
                 rows={3}
               />
             </div>
@@ -553,7 +553,7 @@ export default function UpdateCaseStudy() {
                 onChange={(e) =>
                   setTestimonial((t) => ({ ...t, userName: e.target.value }))
                 }
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-full bg-white dark:bg-[#25272D] text-gray-900 dark:text-white"
+                className="w-full p-3 border border-[#dadce0] rounded-full bg-white text-[#202124]"
               />
             </div>
 
@@ -565,7 +565,7 @@ export default function UpdateCaseStudy() {
                 onChange={(e) =>
                   setTestimonial((t) => ({ ...t, userOccupation: e.target.value }))
                 }
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-full bg-white dark:bg-[#25272D] text-gray-900 dark:text-white"
+                className="w-full p-3 border border-[#dadce0] rounded-full bg-white text-[#202124]"
               />
             </div>
 
@@ -577,7 +577,7 @@ export default function UpdateCaseStudy() {
                 onChange={(e) =>
                   setTestimonial((t) => ({ ...t, company: e.target.value }))
                 }
-                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-full bg-white dark:bg-[#25272D] text-gray-900 dark:text-white"
+                className="w-full p-3 border border-[#dadce0] rounded-full bg-white text-[#202124]"
               />
             </div>
           </div>
@@ -589,7 +589,7 @@ export default function UpdateCaseStudy() {
             <FlexibleButton
   label="Cancel"
   variant="outline" 
-  className="w-[10rem] text-gray-900 dark:text-white"
+  className="w-[10rem] text-[#202124]"
   onClick={() => setTestimonialOpen(false)}
 />
           </Dialog.Close>

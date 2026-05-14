@@ -6,7 +6,8 @@ import Resources from '@/components/pages/resources/Resources';
 import React from 'react'
 
 export const metadata = {
-  title: 'Orifine | Resources',
+  title: 'Resources — Machine Learning Bangladesh',
+  description: 'Curated ML and AI learning materials, guides, datasets, and tools for the Bangladesh AI community.',
 };
 const resourcesPage = () => {
   return (

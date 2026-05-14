@@ -25,7 +25,7 @@ const AdminHeader = () => {
   return (
     <div className={`admin-head-nav ${visible ? 'show' : ''}`} aria-label="Breadcrumb" role="navigation">
         <div className="left">
-            <h1>Orifine</h1>
+            <h1>ML Bangladesh</h1>
         </div>
         <ul className="right">
             <li>

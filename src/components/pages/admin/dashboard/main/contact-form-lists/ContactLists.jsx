@@ -32,7 +32,7 @@ const ContactLists = () => {
     setError(null);
     setLoading(true);
     try {
-      const query = `?page=${p}&limit=${limit}`;
+      const query = `page=${p}&limit=${limit}`;
       const [res, err] = await utilStore.getAllContacts(query);
       if (err) {
         setContacts([]);

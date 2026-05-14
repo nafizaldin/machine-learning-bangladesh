@@ -243,7 +243,7 @@ export default function UpdateBlog() {
     const obj = {
       title: blogTitle,
       author: {
-        name: "Orifine",
+        name: "ML Bangladesh",
         bio: "",
         image: "",
       },
@@ -294,7 +294,7 @@ export default function UpdateBlog() {
  const cleanDescription = stripBaseUrl(description);
   const obj = {
     title: blogTitle,
-    author: { name: "Orifine", bio: "", image: "" },
+    author: { name: "ML Bangladesh", bio: "", image: "" },
     metadata: { title: metaTitle, description: metaDescription },
     content: cleanDescription,
     summary: blogSummary,

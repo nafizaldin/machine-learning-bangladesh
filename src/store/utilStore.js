@@ -268,6 +268,51 @@ const utilStore = proxy({
     }
   },
 
+  async updateUserProfile(id, payload) {
+    let response = [];
+    try {
+      const result = await $axios.patch(`/v1/users/${id}`, payload);
+      const data = result.data;
+      if (data) response = [data, null];
+      else response = [null, "Failed to update profile"];
+    } catch (err) {
+      const error = err.response?.data?.message || err.response?.message || "Something went wrong";
+      response = [null, error];
+    } finally {
+      return response;
+    }
+  },
+
+  async regenerateUserAvatar(id) {
+    let response = [];
+    try {
+      const result = await $axios.patch(`/v1/users/${id}`, { resetAvatar: true });
+      const data = result.data;
+      if (data) response = [data, null];
+      else response = [null, "Failed to regenerate avatar"];
+    } catch (err) {
+      const error = err.response?.data?.message || err.response?.message || "Something went wrong";
+      response = [null, error];
+    } finally {
+      return response;
+    }
+  },
+
+  async deleteUser(id) {
+    let response = [];
+    try {
+      await $axios.delete(`/v1/users/${id}`);
+      response = [true, null];
+    } catch (err) {
+      console.error("deleteUser error:", err);
+      const error =
+        err.response?.data?.message || err.response?.message || "Something went wrong";
+      response = [null, error];
+    } finally {
+      return response;
+    }
+  },
+
   // -----------------------------------------------------------------------------------------
   // Reset store state
   reset() {

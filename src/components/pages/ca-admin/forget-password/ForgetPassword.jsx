@@ -20,12 +20,12 @@ export default function ForgetPassword() {
   <Link href="/">
     <div className="logo-link">
       <Image
-        src="/monogram.svg"
-        alt="logo"
-        width={55}
-        height={55}
+        src="/logo.png"
+        alt="ML Bangladesh"
+        width={120}
+        height={35}
+        className="object-contain"
       />
-      <h1>Orifine</h1>
     </div>
   </Link>
 

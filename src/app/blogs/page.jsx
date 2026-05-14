@@ -11,8 +11,8 @@ import React from 'react'
     const _signature = process.env.NEXT_PUBLIC_SIGN || '';
     
     let data = {
-      title: "Orifine | Blogs",
-      description: "Orifine - Your Digital Companion",
+      title: "Machine Learning Bangladesh | Blogs",
+      description: "A Community United by AI Passion. Explore our blogs to stay updated on the latest AI trends, insights, and innovations. Join us in shaping the future of AI in Bangladesh.",
     };
 
     try {

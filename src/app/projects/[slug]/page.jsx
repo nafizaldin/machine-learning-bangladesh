@@ -14,8 +14,8 @@ export async function generateMetadata({ params }) {
   const baseurl = process.env.NEXT_PUBLIC_BASE_URL;
   const _signature = process.env.NEXT_PUBLIC_SIGN || '';
   const defaultMeta = {
-    title: "Orifine | Single Project",
-    description: "Orifine | Single Project",
+    title: "Project — Machine Learning Bangladesh",
+    description: "ML Bangladesh community project details.",
   };
 
   try {

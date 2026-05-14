@@ -28,7 +28,7 @@ export function NavFooter({ isCollapsed }) {
         <SidebarMenuButton
           asChild
           className={`
-            flex items-center gap-2 rounded-full px-4 py-7 transition-colors hover:bg-[#f3f3f3]
+            flex items-center gap-2 rounded-full px-4 py-7 transition-colors hover:bg-[#e8f0fe]
             ${
               helpActive
                 ? "bg-[#4285F4] text-white"
@@ -48,7 +48,7 @@ export function NavFooter({ isCollapsed }) {
         <SidebarMenuButton
           asChild
           className={`
-            flex items-center gap-2 rounded-full px-4 py-7 transition-colors hover:bg-[#f3f3f3]
+            flex items-center gap-2 rounded-full px-4 py-7 transition-colors hover:bg-[#e8f0fe]
             ${
               settingsActive
                 ? "bg-[#4285F4] text-white"
@@ -59,7 +59,7 @@ export function NavFooter({ isCollapsed }) {
           <Link href="/admin/settings" className="flex items-center gap-2">
             <SettingsSvg
               className={`w-6 h-6 ${
-                settingsActive ? "stroke-white" : "stroke-[#191919]"
+                settingsActive ? "stroke-white" : "stroke-[#5f6368] group-hover:stroke-[#4285F4]"
               }`}
             />
             Settings

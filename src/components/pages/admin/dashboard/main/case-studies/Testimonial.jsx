@@ -43,13 +43,13 @@ const Testimonials = ({ project, mode, options }) => {
               className="flex justify-center items-center"
             >
               <div
-                className="relative w-full  bg-light dark:bg-[#1E1E1E] rounded-2xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all duration-300"
+                className="relative w-full  bg-white border border-[#dadce0] rounded-2xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all duration-300"
                
               >
                 {/* Delete button */}
                 {onDelete && (
                   <button
-                    className="absolute top-3 right-3 p-2 rounded-full border border-gray-300 text-gray-700 hover:bg-red-500 hover:text-white dark:border-gray-600 dark:text-white dark:hover:bg-red-600 transition"
+                    className="absolute top-3 right-3 p-2 rounded-full border border-[#dadce0] text-[#5f6368] hover:bg-red-500 hover:text-white transition"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
@@ -71,20 +71,20 @@ const Testimonials = ({ project, mode, options }) => {
                         : "/images/placeholder.webp"
                     }
                     alt={item?.userName || "User"}
-                    className="object-cover rounded-full w-16 h-16 border border-gray-200 dark:border-gray-700"
+                    className="object-cover rounded-full w-16 h-16 border border-[#dadce0]"
                   />
                 </div>
 
                 {/* Comment */}
-                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed my-3 line-clamp-4">
+                <p className="text-[#5f6368] text-sm leading-relaxed my-3 line-clamp-4">
                   “{item?.comment || "No comment available"}”
                 </p>
 
                 {/* User info */}
-                <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
+                <h4 className="font-semibold text-[#202124] text-sm">
                   {item?.userName || "Anonymous"}
                 </h4>
-                <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">
+                <p className="text-[#5f6368] text-xs mt-1">
                   {item?.company || "No company info"}
                 </p>
               </div>

@@ -34,8 +34,8 @@ export default function LoginPage() {
       <Image
         src="/logo.png"
         alt="logo"
-        width={100}
-        height={30}
+        width={300}
+        height={100}
       />
     </div>
   </Link>

@@ -45,7 +45,7 @@ export function NavMain({ items }) {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton
                     tooltip={item.title}
-                    className={`flex-shrink-0 rounded-full px-4 py-7 flex items-center gap-2 transition-colors duration-200 hover:bg-[#f3f3f3] hover:text-primary
+                    className={`flex-shrink-0 rounded-full px-4 py-7 flex items-center gap-2 transition-colors duration-200 hover:bg-[#e8f0fe] hover:text-[#4285F4]
                       ${
                         subMenuActive
                           ? "bg-[#4285F4] text-white"
@@ -59,9 +59,9 @@ export function NavMain({ items }) {
                     )}
                     <span>{item.title}</span>
                     <ArrowRightSvg
-                      className={`ml-auto transition-transform duration-200 
-                        group-data-[state=open]/collapsible:rotate-90 
-                        ${subMenuActive ? "hover:text-primary" : "text-[#202124] group-hover/collapsible:text-primary"}`}
+                      className={`ml-auto transition-transform duration-200
+                        group-data-[state=open]/collapsible:rotate-90
+                        ${subMenuActive ? "text-white" : "text-[#5f6368] group-hover/collapsible:text-[#4285F4]"}`}
                     />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
@@ -76,7 +76,7 @@ export function NavMain({ items }) {
                         <SidebarMenuSubItem key={subItem.title}>
                           <SidebarMenuSubButton
                             asChild
-                            className={`flex-shrink-0 rounded-full pl-12 flex items-center gap-2 transition-colors duration-200 hover:bg-[#f3f3f3] hover:text-primary
+                            className={`flex-shrink-0 rounded-full pl-12 flex items-center gap-2 transition-colors duration-200 hover:bg-[#e8f0fe] hover:text-[#4285F4]
                               ${
                                 issubMenuActive
                                   ? "bg-[#4285F4] text-white"
@@ -105,7 +105,7 @@ export function NavMain({ items }) {
                 asChild
                 tooltip={item.title}
                 
-                className={`rounded-full px-4 py-7 flex items-center gap-2 transition-colors duration-200 hover:bg-[#f3f3f3] hover:text-primary
+                className={`rounded-full px-4 py-7 flex items-center gap-2 transition-colors duration-200 hover:bg-[#e8f0fe] hover:text-[#4285F4]
                   ${
                     menuActive
                       ? "bg-[#4285F4] text-white"

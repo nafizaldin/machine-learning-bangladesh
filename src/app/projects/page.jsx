@@ -12,8 +12,8 @@ import React from 'react'
     const _signature = process.env.NEXT_PUBLIC_SIGN || '';
    
     let data = {
-      title: "Orifine | Projects",
-      description: "Orifine - Your Digital Companion",
+      title: "Projects — Machine Learning Bangladesh",
+      description: "ML Bangladesh community projects and initiatives.",
     };
 
     try {

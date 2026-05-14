@@ -1,17 +1,17 @@
 .ca-create-resource {
-  @apply min-h-screen py-14 px-6 flex flex-col gap-6 bg-white text-[#191919] dark:bg-[#191919] dark:text-white;
+  @apply min-h-screen py-14 px-6 flex flex-col gap-6 bg-white text-[#202124];
 
   .resource-page {
     @apply flex flex-col gap-2;
 
     label {
-      @apply text-sm font-medium text-[#6B7280] dark:text-[#B6B3C5];
+      @apply text-sm font-medium text-[#5f6368];
     }
 
     input,
     textarea,
     select {
-      @apply w-full p-3 border border-gray-300 rounded-lg bg-white text-[#191919] dark:bg-[#25272D] dark:text-white;
+      @apply w-full p-3 border border-[#dadce0] rounded-lg bg-white text-[#202124];
     }
 
     textarea {
@@ -26,7 +26,7 @@
     @apply flex flex-col gap-2;
 
     label {
-      @apply text-sm font-medium text-[#6B7280] dark:text-[#B6B3C5];
+      @apply text-sm font-medium text-[#5f6368];
     }
   }
 
@@ -39,11 +39,11 @@
 
       select,
       input {
-        @apply w-full p-3 rounded-full bg-white text-[#191919] dark:bg-[#25272D] dark:text-white;
+        @apply w-full p-3 rounded-full bg-white text-[#202124] border border-[#dadce0];
       }
 
       select {
-        @apply appearance-none border border-gray-300;
+        @apply appearance-none;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M13 1.00005C13 1.00005 8.5811 7 7 7C5.4188 7 1 1 1 1' stroke='%23707786' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 20px center;
@@ -58,7 +58,7 @@
 
     input,
     textarea {
-      @apply w-full p-3 border border-gray-300 rounded-lg bg-white text-[#191919] dark:bg-[#25272D] dark:text-white;
+      @apply w-full p-3 border border-[#dadce0] rounded-lg bg-white text-[#202124];
     }
 
     textarea {
@@ -66,7 +66,7 @@
     }
 
     label {
-      @apply text-sm font-medium text-[#6B7280] dark:text-[#B6B3C5];
+      @apply text-sm font-medium text-[#5f6368];
     }
   }
 
@@ -74,7 +74,9 @@
     @apply flex gap-4;
 
     .resource-btn {
-      @apply flex-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full py-3 cursor-pointer text-white;
+      @apply flex-1 rounded-full py-3 cursor-pointer text-white;
+      background: #4285F4;
+      &:hover { background: #1967d2; }
     }
   }
 }

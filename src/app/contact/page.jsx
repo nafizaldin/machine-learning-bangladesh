@@ -8,8 +8,8 @@ import React from 'react'
     const _signature = process.env.NEXT_PUBLIC_SIGN || '';
 
     let data = {
-      title: "Orifine | Contact",
-      description: "Orifine - Your Digital Companion",
+      title: "Machine Learning Bangladesh | Contact",
+      description: "Get in touch with us. Have questions or want to learn more about our machine learning initiatives in Bangladesh?",
     };
 
     try {

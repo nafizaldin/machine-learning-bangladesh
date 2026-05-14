@@ -10,8 +10,8 @@ export async function generateMetadata({ params }) {
   const baseurl = process.env.NEXT_PUBLIC_BASE_URL;
   const _signature = process.env.NEXT_PUBLIC_SIGN || '';
   const defaultMeta = {
-    title: "Orifine | Single Blog",
-    description: "Orifine | Single Blog",
+    title: "Blog — Machine Learning Bangladesh",
+    description: "Read AI and machine learning insights from the ML Bangladesh community.",
   };
 
   try {

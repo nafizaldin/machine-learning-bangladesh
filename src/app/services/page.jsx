@@ -13,8 +13,8 @@ import React from 'react'
     const _signature = process.env.NEXT_PUBLIC_SIGN || '';
     
     let data = {
-      title: "Orifine | Services",
-      description: "Orifine - Your Digital Companion",
+      title: "What We Do — Machine Learning Bangladesh",
+      description: "ML Bangladesh community programs: workshops, competitions, study groups, and more.",
     };
 
     try {

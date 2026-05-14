@@ -94,8 +94,8 @@ export default function FbPixelId() {
           {...register("pixelId", { required: true })}
           disabled={isExisting && !editMode}
           placeholder="1234567890123456"
-          className={`border px-3 py-2 rounded w-full ${
-            isExisting && !editMode ? "bg-gray-100 dark:bg-gray-800" : ""
+          className={`border border-[#dadce0] px-3 py-2 rounded w-full ${
+            isExisting && !editMode ? "bg-gray-100" : ""
           }`}
         />
         {!isExisting ? (

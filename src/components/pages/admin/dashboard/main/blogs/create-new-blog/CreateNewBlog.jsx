@@ -113,7 +113,7 @@ export default function CreateNewBlog() {
 
     const obj = {
       title: blogTitle,
-      author: { name: "Orifine", bio: "", image: "" },
+      author: { name: "ML Bangladesh", bio: "", image: "" },
       metadata: { title: metaTitle, description: metaDescription },
       content: cleanDescription,
       summary: blogSummary,
@@ -139,7 +139,7 @@ export default function CreateNewBlog() {
    const cleanDescription = stripBaseUrl(description );
     const obj = {
       title: blogTitle,
-      author: { name: "Orifine", bio: "", image: "" },
+      author: { name: "ML Bangladesh", bio: "", image: "" },
       metadata: { title: metaTitle, description: metaDescription },
       content: cleanDescription,
       summary: blogSummary,
